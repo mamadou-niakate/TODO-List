@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { AppContext } from '../../components/HOC';
 
 import TaskCardList from '../../components/Tasks/TaskCardList';

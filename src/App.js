@@ -17,7 +17,6 @@ function App() {
 }
 
 const MyApp = () => {
-  const { state } = useContext(AppContext);
   return (
     <Router>
       <div className="main">
