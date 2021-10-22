@@ -27,7 +27,6 @@ function Appbar() {
             <ul className="nav-items">
                 <li> Naveen </li>
                 <li> Naveen </li>
-                <li> Naveen </li>
                 <li> <FaUserAlt /> </li>
             </ul>
         </div>

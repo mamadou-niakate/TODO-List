@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './index.css';
 import { MdUpdate } from 'react-icons/md';
 import { BiEdit } from 'react-icons/bi';
 import { AiTwotoneDelete } from 'react-icons/ai';
+import Modal from '../../Modal';
 
 function TaskCard({task}) {
     const {title,description,date,priority} = task;
+    const [openModal, setOpenModal] = useState(false)
     return (
         <div className="container">
             <div className="task-card">
@@ -26,9 +28,14 @@ function TaskCard({task}) {
                 </div>
             </div>
             <div>
-                <p><BiEdit style={{cursor:'pointer'}}/></p>
+                <p><BiEdit style={{cursor:'pointer'}} onClick={() => setOpenModal(true)}/></p>
                 <p><AiTwotoneDelete style={{cursor:'pointer'}}/></p>
             </div>
+            <Modal 
+                show={openModal} 
+                setOpenModal={setOpenModal}
+                task={task}
+            />
         </div>
     )
 }

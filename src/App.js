@@ -11,7 +11,7 @@ import Appbar from './components/Appbar';
 function App() {
   return (
     <ContextProvider>
-      <MyApp />
+      <MyApp /> 
     </ContextProvider>
   );
 }
