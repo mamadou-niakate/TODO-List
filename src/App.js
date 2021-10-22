@@ -2,7 +2,6 @@ import React, { useEffect, useReducer, useState } from 'react';
 import './App.css';
 
 import { tasks } from './data';
-import TodoList from './TodoList';
 import { getFilterService } from './services/filter.service';
 import TaskCardList from './components/Tasks/TaskCardList';
 import Sidebar from './components/Sidebar';

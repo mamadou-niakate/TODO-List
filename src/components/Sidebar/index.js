@@ -29,7 +29,7 @@ function Sidebar({collapse}) {
         <div className={collapse ? "sidebar-collapse" : "sidebar-uncollapse"}>
             <ul className="sidebar-menu">
                 {navLinks.map((item) => {
-                    const { id, link, Icon, label } = item;
+                    const { id, Icon, label } = item;
                     return (
                         <li key={id} className="sidebar-menu-item" onClick={() => handleActiveItem(label)}>
                             <p>{Icon}</p>
