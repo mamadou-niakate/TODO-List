@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './App.css';
 
 import Tasks from './pages/Tasks/Tasks';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TasksCalendar from './components/Calendar';
-import { ContextProvider, AppContext } from './components/HOC';
+import { ContextProvider } from './components/HOC';
 import Sidebar from './components/Sidebar';
 import Appbar from './components/Appbar';
 
