@@ -1,0 +1,30 @@
+.app-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid rgb(177, 177, 177);
+  height: 50px;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-items li {
+  list-style-type: none;
+  color: #03015d;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.logo {
+  margin: 30px;
+  color: #03015d;
+  font-size: 40px;
+}
+
+/******* MEDIA QUERIES*/
