@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { FaUserAlt } from 'react-icons/fa';
 import './index.css';
+import { AppContext } from '../HOC';
 
-function Appbar({dispatcher, state}) {
+function Appbar() {
+    const {dispatcher, state} = useContext(AppContext);
     const handleCollapse = () => {
         if(state.collapse) {
-            dispatcher({type:"UNCOLLAPSE"})
+            dispatcher({type:"UNCOLLAPSE"});
         } else {
-            dispatcher({type:"COLLAPSE"})
+            dispatcher({type:"COLLAPSE"});
         }
     }
     return (
@@ -17,13 +19,12 @@ function Appbar({dispatcher, state}) {
             <div className="logo"> 
                 <p style={{cursor:'pointer'}}>
                     {
-                        state.collapse ? <GiHamburgerMenu onClick={handleCollapse} /> : <AiOutlineClose onClick={handleCollapse}/>
+                        state.collapse ? <GiHamburgerMenu onClick={handleCollapse} />
+                                       : <AiOutlineClose onClick={handleCollapse}/>
                     }
                 </p> 
             </div>
             <ul className="nav-items">
-                <li> Naveen </li>
-                <li> Naveen </li>
                 <li> Naveen </li>
                 <li> Naveen </li>
                 <li> Naveen </li>

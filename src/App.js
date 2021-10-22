@@ -1,56 +1,47 @@
-import React, { useEffect, useReducer, useState } from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 
-import { tasks } from './data';
-import { getFilterService } from './services/filter.service';
-import TaskCardList from './components/Tasks/TaskCardList';
+import Tasks from './pages/Tasks/Tasks';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import TasksCalendar from './components/Calendar';
+import { ContextProvider, AppContext } from './components/HOC';
 import Sidebar from './components/Sidebar';
 import Appbar from './components/Appbar';
 
-const reducer = (state,action) => {
-  if(action.type === "COLLAPSE") {
-    return {...state,collapse:true};
-  } else if( action.type === "UNCOLLAPSE") {
-    return {...state,collapse:false};
-  }
-}
-const defaultState = {
-  tasksTodo: getFilterService.filterDataByStatus(tasks,"to do"),
-  tasksInProgress: getFilterService.filterDataByStatus(tasks,"in progress"),
-  tasksComplete: getFilterService.filterDataByStatus(tasks,"complete"),
-  collapse: true
-}
 function App() {
   return (
-    <div>
-      <Test/>
-    </div>
+    <ContextProvider>
+      <MyApp />
+    </ContextProvider>
   );
 }
 
-const Test = () => {
-  const [state,dispatcher] = useReducer(reducer,defaultState);
-  const [collapse, setCollapse] = useState(state.collapse);
-
-  useEffect(() => {
-    setCollapse(state.collapse)
-  },[state.collapse])
-
+const MyApp = () => {
+  const { state } = useContext(AppContext);
   return (
-    <div className="App">
+    <Router>
       <div className="main">
-        <Sidebar dispatcher={dispatcher} collapse={collapse}/>
+        <Sidebar />
         <main>
-          <Appbar dispatcher={dispatcher} state={state} />
-          <div className="content">
-              <TaskCardList tasks={state.tasksTodo} title={"Todo"} />
-              <TaskCardList tasks={state.tasksInProgress} title={"In Progress"} />
-              <TaskCardList tasks={state.tasksComplete} title={"Complete"} />
-          </div>
-        </main>
+          <Appbar />
+          <Switch>
+            <Router exact path="/" >
+              <Tasks />
+            </Router>
+            <Route path="/tasks">
+              <Tasks />
+            </Route>
+            <Route path="/tasks-calendar">
+              <TasksCalendar />
+            </Route>
+            <Route path="*">
+              <h1>Erreur 404</h1>
+            </Route>
+          </Switch>
+          </main>
       </div>
-    </div>
-  );
+    </Router>
+  )
 }
 
 export default App;

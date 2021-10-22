@@ -20,6 +20,6 @@ div.tasksCardList h1.title {
   text-align: center;
 }
 
-button {
-  margin-top: 20px;
+button.add-button {
+  margin: 20px 0 10px 100px;
 }

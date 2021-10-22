@@ -32,7 +32,11 @@
   margin-left: 5px;
 }
 
-li.sidebar-menu-item {
+li {
+  list-style-type: none;
+}
+
+li .sidebar-menu-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -41,9 +45,10 @@ li.sidebar-menu-item {
   cursor: pointer;
   margin-left: -30px;
   margin-right: 10px;
+  text-decoration: none;
 }
 
-li.sidebar-menu-item:hover {
+li .sidebar-menu-item:hover {
   background-color: aliceblue;
 }
 

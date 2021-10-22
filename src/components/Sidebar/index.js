@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {HiOutlineCollection} from 'react-icons/hi'
 import { AiTwotoneCalendar } from 'react-icons/ai';
+import { Link } from "react-router-dom";
 
 import './index.css';
+import { AppContext } from '../HOC';
 
 const navLinks = [
     {
@@ -13,12 +15,13 @@ const navLinks = [
     },
     {
         id:2,
-        link: "calendar",
+        link: "tasks-calendar",
         Icon:<AiTwotoneCalendar style={{fontSize:30,color:"#03015d"}}/>,
         label:"Calendar"
     }
 ]
-function Sidebar({collapse}) {
+function Sidebar() {
+    const { state } = useContext(AppContext)
     const [activeItem, setActiveItem] = useState('');
 
     const handleActiveItem = (item) => {
@@ -26,19 +29,23 @@ function Sidebar({collapse}) {
     }
 
     return (
-        <div className={collapse ? "sidebar-collapse" : "sidebar-uncollapse"}>
+        <div className={state.collapse ? "sidebar-collapse" : "sidebar-uncollapse"}>
+            <h1 style={{paddingBottom:-40, marginTop:10}}>Nania</h1>
+            <hr/>
             <ul className="sidebar-menu">
                 {navLinks.map((item) => {
-                    const { id, Icon, label } = item;
+                    const { id, Icon, label, link } = item;
                     return (
-                        <li key={id} className="sidebar-menu-item" onClick={() => handleActiveItem(label)}>
-                            <p>{Icon}</p>
-                            <p 
-                                className={collapse ? "item-collapse" : "item-uncollapse"} 
-                                style={label === activeItem ? {color: "#03015d"} : {}}
-                            >
-                                    { label }
-                            </p>
+                        <li key={id} onClick={() => handleActiveItem(label)}>
+                            <Link className="sidebar-menu-item" to={link}>
+                                <p>{Icon}</p>
+                                <p 
+                                    className={state.collapse ? "item-collapse" : "item-uncollapse"} 
+                                    style={label === activeItem ? {color: "#03015d"} : {}}
+                                >
+                                        { label }
+                                </p>
+                            </Link>
                         </li>
                     )
                 })}
