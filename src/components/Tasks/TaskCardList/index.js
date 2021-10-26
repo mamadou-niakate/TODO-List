@@ -1,9 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { AppContext } from '../../HOC'
 import Modal from '../../Modal'
 import TaskCard from '../TaskCard'
 import './index.css'
 function TaskCardList({title,tasks}) {
-    const [openModal, setOpenModal] = useState(false)
+    const { dispatcher } = useContext(AppContext);
+    const [openModal, setOpenModal] = useState(false);
+
+    const addTaskCard = (newTodoCard) => {
+        dispatcher({type: 'ADDNEWTODOCARD',payload:newTodoCard});
+        setOpenModal(false);
+    }
+
     return (
         <div className="tasksCardList">
             <h1 className="title">{title}</h1>
@@ -27,6 +35,8 @@ function TaskCardList({title,tasks}) {
                     priority:"less",
                     status:"to do"
                 }}
+                addTaskCard={addTaskCard}
+                method="post"
             />
         </div>
     )

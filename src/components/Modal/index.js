@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { AppContext } from '../HOC';
 import './modal.css';
 
-const Modal = ({ setOpenModal, show, task }) => {
+const Modal = ({ setOpenModal, show, task, addTaskCard,method }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
+  const { dispatcher } = useContext(AppContext)
 
   const [taskToWorkOn, setTaskToWorkOn] = useState(task);
 
@@ -14,7 +16,12 @@ const Modal = ({ setOpenModal, show, task }) => {
     e.stopPropagation();
   }
   const handleSave = () => {
-    // TODO
+    if(method === "post") {
+      addTaskCard(taskToWorkOn);
+    } else if(method === "put") {
+      dispatcher({type:"EDITTASK",payload:taskToWorkOn})
+    }
+    
     setOpenModal(false)
   }
   return (

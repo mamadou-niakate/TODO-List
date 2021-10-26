@@ -7,7 +7,8 @@ import Modal from '../../Modal';
 
 function TaskCard({task}) {
     const {title,description,date,priority} = task;
-    const [openModal, setOpenModal] = useState(false)
+    const [openModal, setOpenModal] = useState(false);
+
     return (
         <div className="container">
             <div className="task-card">
@@ -35,6 +36,7 @@ function TaskCard({task}) {
                 show={openModal} 
                 setOpenModal={setOpenModal}
                 task={task}
+                method="put"
             />
         </div>
     )
