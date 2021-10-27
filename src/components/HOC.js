@@ -11,7 +11,14 @@ const reducer = (state,action) => {
   } else if( action.type === "UNCOLLAPSE") {
     return {...state,collapse:false};
   } else if(action.type === "ADDNEWTODOCARD") {
-    state.tasksTodo.push(action.payload);
+    const { status } = action.payload;
+    if(status === "to do") {
+      state.tasksTodo.push(action.payload);
+    } else if( status === "in progress") {
+      state.tasksInProgress.push(action.payload);
+    } else if (status === "complete") {
+      state.tasksComplete.push(action.payload);
+    }
     return {...state};
   } else if(action.type === "EDITTASK") {
     const {id,status} = action.payload;

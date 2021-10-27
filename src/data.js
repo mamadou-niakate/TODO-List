@@ -77,7 +77,7 @@ export const tasks = [
   {
     id:9,
     title:"Task 3",
-    description:"this is my task this is my task this is my task this is my task this is my task this is my task this is my task this is my task this is my task this is my task 3",
+    description:"this is my task 2",
     date:1389878466730,
     priority:"high",
     status: "complete"

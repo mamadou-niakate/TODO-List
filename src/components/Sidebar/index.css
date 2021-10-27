@@ -2,7 +2,6 @@
   width: 50px;
   background-color: #fff;
   margin: 0;
-  height: 100vh;
   border-right: 1px solid rgb(177, 177, 177);
   transition: 1s ease;
 }
@@ -11,7 +10,6 @@
   width: 150px;
   background-color: #fff;
   margin: 0;
-  height: 100vh;
   border-right: 1px solid rgb(177, 177, 177);
   transition: 1s ease;
 }

@@ -43,7 +43,7 @@ const Modal = ({ setOpenModal, show, task, addTaskCard,method }) => {
               </select>
             </div>
             <div style={{marginTop:10}}>
-              <select name="priority" value={taskToWorkOn.priority} onChange={handleInputChange}>
+              <select name="priority" value={taskToWorkOn.status} onChange={handleInputChange}>
                 <option value="high">High</option>
                 <option value="medium">Medium</option>
                 <option value="less">Less</option>
