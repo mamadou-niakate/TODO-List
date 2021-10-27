@@ -37,7 +37,7 @@ button.add-button :first-child {
 .tasksCardListInfo {
   display: flex;
   justify-content: space-around;
-  width: 300px;
+  width: 400px;
 }
 
 /* default styles here for older browsers. 
