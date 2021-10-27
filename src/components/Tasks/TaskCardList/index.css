@@ -44,7 +44,6 @@ button.add-button {
   }
 
   .tasksCardList {
-    background-color: rgb(18, 86, 104);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
