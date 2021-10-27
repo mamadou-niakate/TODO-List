@@ -1,8 +1,8 @@
 .container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background-color: #fffdfd;
-  margin-top: 10px;
+  margin: 10px;
 }
 
 .container:hover {
@@ -12,7 +12,6 @@
 .task-card {
   display: flex;
   flex-direction: column;
-  /* background-color: aliceblue; */
   background-color: #fffdfd;
 }
 
@@ -36,4 +35,25 @@ p {
 
 .date {
   display: flex;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .task-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .action-buttons {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
 }

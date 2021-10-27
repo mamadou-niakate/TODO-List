@@ -5,6 +5,7 @@
   background-color: #fff;
   border-bottom: 1px solid rgb(177, 177, 177);
   height: 55px;
+  width: 100%;
 }
 
 .nav-items {
@@ -28,3 +29,11 @@
 }
 
 /******* MEDIA QUERIES*/
+@media only screen and (max-device-width: 480px) {
+  .nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+  }
+}

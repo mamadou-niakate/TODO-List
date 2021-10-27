@@ -28,7 +28,7 @@ function TaskCard({task}) {
                     <p>{date}</p>
                 </div>
             </div>
-            <div>
+            <div className="action-buttons">
                 <p><BiEdit style={{cursor:'pointer'}} onClick={() => setOpenModal(true)}/></p>
                 <p><AiTwotoneDelete style={{cursor:'pointer'}}/></p>
             </div>
