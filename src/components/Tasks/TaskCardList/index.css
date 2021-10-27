@@ -14,13 +14,30 @@
 h1 {
   color: #03015d;
 }
-div.tasksCardListContainer h1.title {
+div.tasksCardListInfo h1.title {
   color: #03015d;
   text-align: center;
 }
 
 button.add-button {
+  background-color: transparent;
+  border: none;
+}
+
+button.add-button :first-child {
+  font-size: 40px;
+  background-color: #03015d;
   margin: 20px 0 10px 100px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.tasksCardListInfo {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
 }
 
 /* default styles here for older browsers. 
@@ -53,7 +70,7 @@ button.add-button {
     margin-left: 10px;
   }
 
-  .tasksCardListContainer .title {
+  .tasksCardListInfo .title {
     width: 250px;
   }
 }

@@ -3,6 +3,8 @@ import { AppContext } from '../../HOC'
 import Modal from '../../Modal'
 import TaskCard from '../TaskCard'
 import './index.css'
+import { AiFillPlusCircle } from 'react-icons/ai';
+
 function TaskCardList({title,tasks}) {
     const { dispatcher } = useContext(AppContext);
     const [openModal, setOpenModal] = useState(false);
@@ -14,7 +16,16 @@ function TaskCardList({title,tasks}) {
 
     return (
         <div className="tasksCardListContainer">
-            <h1 className="title">{title}</h1>
+            <div className="tasksCardListInfo">
+                <h1 className="title">{title}</h1>
+                <button 
+                    className="add-button" 
+                    onClick={() => setOpenModal(true)}
+                    style={{display:'inline-block'}}
+                >
+                    <AiFillPlusCircle />
+                </button>
+            </div>
             <div className="tasksCardList">
                 {
                     tasks.map((task) => {
@@ -23,9 +34,6 @@ function TaskCardList({title,tasks}) {
                         )
                     })
                 }
-                <div>
-                    <button className="add-button" onClick={() => setOpenModal(true)}>+ Ajouter une carte</button>
-                </div>
                 <Modal 
                     show={openModal} 
                     setOpenModal={setOpenModal}
