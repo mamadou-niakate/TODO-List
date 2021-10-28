@@ -63,7 +63,7 @@ div.content {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 30%;
+  width: 40%;
 }
 
 .app-bar-dark-mode .nav-items li {
@@ -97,7 +97,7 @@ div.content {
 .tasksCardListInfo-dark {
   display: flex;
   justify-content: space-around;
-  width: 300px;
+  width: 400px;
 }
 
 .tasksCardListInfo-dark .title {

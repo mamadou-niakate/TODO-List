@@ -72,6 +72,6 @@ input:checked + label:after {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 80%;
+    width: 40%;
   }
 }
