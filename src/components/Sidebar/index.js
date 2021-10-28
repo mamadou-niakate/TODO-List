@@ -10,13 +10,13 @@ const navLinks = [
     {
         id:1,
         link: '/tasks',
-        Icon:<HiOutlineCollection style={{fontSize: 30}}/>,
+        Icon:<HiOutlineCollection/>,
         label:"Tasks"
     },
     {
         id:2,
         link: "tasks-calendar",
-        Icon:<AiTwotoneCalendar style={{fontSize: 30}}/>,
+        Icon:<AiTwotoneCalendar/>,
         label:"Calendar"
     }
 ]
