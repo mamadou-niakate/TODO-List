@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 
 import Tasks from './pages/Tasks/Tasks';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TasksCalendar from './components/Calendar';
-import { ContextProvider } from './components/HOC';
+import { AppContext, ContextProvider } from './components/HOC';
 import Sidebar from './components/Sidebar';
 import Appbar from './components/Appbar';
 
@@ -17,9 +17,10 @@ function App() {
 }
 
 const MyApp = () => {
+  const { state } = useContext(AppContext);
   return (
     <Router>
-      <div className="main">
+      <div className={state.switchToDarkMode ?  "main-dark" : "main"}>
         <Sidebar />
         <main>
           <Appbar />

@@ -1,6 +1,7 @@
 .main {
   display: flex;
   justify-content: space-between;
+  transition: 1s ease;
 }
 
 main {
@@ -10,10 +11,118 @@ main {
   width: 100%;
 }
 
+/**** CHILD COMPONENT */
+.app-bar {
+  background-color: #fff;
+  border-bottom: 1px solid rgb(177, 177, 177);
+}
+
+.sidebar-collapse {
+  background-color: #fff;
+  border-right: 1px solid rgb(177, 177, 177);
+}
+
+.sidebar-uncollapse {
+  background-color: #fff;
+  border-right: 1px solid rgb(177, 177, 177);
+}
+
+.tasksCardList {
+  background-color: #efefef;
+}
+
 div.content {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+/** DARK MODE */
+.app-bar-dark-mode {
+  background-color: #414141;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  width: 100%;
+  transition: 1s ease;
+}
+
+.app-bar-dark-mode {
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.app-bar-dark-mode .logo {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  color: #fff;
+  font-size: 40px;
+}
+
+.app-bar-dark-mode .nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.app-bar-dark-mode .nav-items li {
+  list-style-type: none;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.main-dark {
+  display: flex;
+  justify-content: space-between;
+  background-color: #414141;
+  transition: 1s ease;
+}
+
+.main-dark .sidebar-collapse-dark {
+  background-color: #414141;
+  transition: 1s ease;
+}
+
+.main-dark .sidebar-uncollapse-dark {
+  background-color: #414141;
+  transition: 1s ease;
+}
+
+.sidebar-uncollapse-dark h1 {
+  color: #fff;
+}
+
+.tasksCardListInfo-dark {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+}
+
+.tasksCardListInfo-dark .title {
+  font-size: 25px;
+  padding-top: 15px;
+  color: #fff;
+}
+
+.tasksCardListInfo-dark .add-button .plus-icon {
+  font-size: 40px;
+  margin: 20px 0 10px 100px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.tasksCardList-dark {
+  background-color: #525252;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 300px;
+  transition: 1s ease;
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -22,5 +131,15 @@ div.content {
   div.content {
     display: flex;
     flex-direction: column;
+  }
+
+  .tasksCardList-dark {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    width: 390px;
+    height: 250px;
+    margin-left: 10px;
   }
 }

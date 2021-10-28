@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  background-color: #efefef;
   width: 300px;
 }
 
@@ -24,7 +23,7 @@ button.add-button {
   border: none;
 }
 
-button.add-button :first-child {
+.tasksCardListInfo .add-button .plus-icon {
   font-size: 40px;
   background-color: #03015d;
   margin: 20px 0 10px 100px;
@@ -65,13 +64,14 @@ button.add-button :first-child {
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: scroll;
-    width: 390px;
+    scrollbar-track-color: #03015d;
+    width: 355px;
     height: 250px;
     margin-left: 10px;
   }
 
   .tasksCardListInfo .title {
-    width: 250px;
+    width: 100px;
     font-size: 30px;
     padding-top: 15px;
   }

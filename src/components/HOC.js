@@ -50,13 +50,20 @@ const reducer = (state,action) => {
       state.tasksComplete = newTasksComple;
     }
     return {...state}
+  } else if (action.type === "SWITCHTODARKMODE") {
+    state.switchToDarkMode = true;
+    return {...state}
+  } else if (action.type === "SWITCHTONORMALMODE") {
+    state.switchToDarkMode = false;
+    return {...state}
   }
 }
 const defaultState = {
   tasksTodo: getFilterService.filterDataByStatus(tasks,"to do"),
   tasksInProgress: getFilterService.filterDataByStatus(tasks,"in progress"),
   tasksComplete: getFilterService.filterDataByStatus(tasks,"complete"),
-  collapse: true
+  collapse: true,
+  switchToDarkMode: false
 }
 
 const ContextProvider = ({children}) => {

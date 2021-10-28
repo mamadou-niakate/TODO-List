@@ -1,11 +1,15 @@
-.container {
+.task-container {
   display: flex;
   justify-content: space-between;
   background-color: #fffdfd;
   margin: 10px;
 }
 
-.container:hover {
+.action-buttons {
+  background-color: #fffdfd;
+}
+
+.task-container:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
@@ -38,7 +42,7 @@ p {
 }
 
 @media only screen and (max-device-width: 480px) {
-  .container {
+  .task-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

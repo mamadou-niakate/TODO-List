@@ -10,7 +10,8 @@ function TaskCard({task}) {
     const [openModal, setOpenModal] = useState(false);
 
     return (
-        <div className="container">
+        // <div className={ state ? "task-container-dark": "task-container"}>
+        <div className="task-container">
             <div className="task-card">
                 <h1 
                     className={

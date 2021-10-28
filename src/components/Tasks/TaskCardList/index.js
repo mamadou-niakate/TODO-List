@@ -6,7 +6,7 @@ import './index.css'
 import { AiFillPlusCircle } from 'react-icons/ai';
 
 function TaskCardList({title,tasks}) {
-    const { dispatcher } = useContext(AppContext);
+    const { dispatcher, state } = useContext(AppContext);
     const [openModal, setOpenModal] = useState(false);
 
     const addTaskCard = (newTodoCard) => {
@@ -16,17 +16,18 @@ function TaskCardList({title,tasks}) {
 
     return (
         <div className="tasksCardListContainer">
-            <div className="tasksCardListInfo">
+            <div className={state.switchToDarkMode ? "tasksCardListInfo-dark" : "tasksCardListInfo"}>
                 <h1 className="title">{title}</h1>
                 <button 
                     className="add-button" 
                     onClick={() => setOpenModal(true)}
                     style={{display:'inline-block'}}
                 >
-                    <AiFillPlusCircle />
+                    <AiFillPlusCircle className="plus-icon" />
                 </button>
             </div>
-            <div className="tasksCardList">
+            <div className={state.switchToDarkMode ? "tasksCardList-dark" : "tasksCardList"}>
+            {/* <div className="tasksCardList"> */}
                 {
                     tasks.map((task) => {
                         return (

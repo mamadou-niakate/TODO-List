@@ -2,10 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-  border-bottom: 1px solid rgb(177, 177, 177);
   height: 55px;
   width: 100%;
+  transition: 1s ease;
 }
 
 .nav-items {
@@ -22,8 +21,9 @@
   cursor: pointer;
 }
 
-.logo {
-  margin: 30px;
+.app-bar .logo {
+  margin-bottom: 10px;
+  margin-left: 10px;
   color: #03015d;
   font-size: 40px;
 }
@@ -39,7 +39,7 @@ label {
   text-indent: -9999px;
   width: 80px;
   height: 25px;
-  background: grey;
+  background: #03015d;
   display: block;
   border-radius: 100px;
   position: relative;
@@ -52,13 +52,13 @@ label:after {
   left: 5px;
   width: 20px;
   height: 20px;
-  background: #fff;
+  background: grey;
   border-radius: 90px;
   transition: 0.3s;
 }
 
 input:checked + label {
-  background: #03015d;
+  background: #fff;
 }
 
 input:checked + label:after {

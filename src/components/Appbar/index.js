@@ -7,6 +7,13 @@ import { AppContext } from '../HOC';
 
 function Appbar() {
     const {dispatcher, state} = useContext(AppContext);
+    const handleDarkMode = () => {
+        if(state.switchToDarkMode) {
+            dispatcher({type:"SWITCHTONORMALMODE"})
+        } else {
+            dispatcher({type:"SWITCHTODARKMODE"})
+        }
+    }
     const handleCollapse = () => {
         if(state.collapse) {
             dispatcher({type:"UNCOLLAPSE"});
@@ -15,7 +22,7 @@ function Appbar() {
         }
     }
     return (
-        <div className="app-bar">
+        <div className={state.switchToDarkMode ? "app-bar-dark-mode":"app-bar"}>
             <div className="logo"> 
                 <p style={{cursor:'pointer'}}>
                     {
@@ -25,7 +32,7 @@ function Appbar() {
                 </p> 
             </div>
             <ul className="nav-items">
-                <input type="checkbox" id="switch" />
+                <input type="checkbox" id="switch" onChange={handleDarkMode}/>
                 <label for="switch">Toggle</label>
                 <li> <FaUserAlt /> </li>
             </ul>

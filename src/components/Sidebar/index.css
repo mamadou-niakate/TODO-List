@@ -1,16 +1,12 @@
 .sidebar-collapse {
   width: 50px;
-  background-color: #fff;
   margin: 0;
-  border-right: 1px solid rgb(177, 177, 177);
   transition: 1s ease;
 }
 
 .sidebar-uncollapse {
   width: 150px;
-  background-color: #fff;
   margin: 0;
-  border-right: 1px solid rgb(177, 177, 177);
   transition: 1s ease;
 }
 
