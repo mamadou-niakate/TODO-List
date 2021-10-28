@@ -16,6 +16,7 @@ h1 {
 div.tasksCardListInfo h1.title {
   color: #03015d;
   text-align: center;
+  font-size: 25px;
 }
 
 button.add-button {
