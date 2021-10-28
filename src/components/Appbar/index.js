@@ -25,8 +25,8 @@ function Appbar() {
                 </p> 
             </div>
             <ul className="nav-items">
-                <li> Naveen </li>
-                <li> Naveen </li>
+                <input type="checkbox" id="switch" />
+                <label for="switch">Toggle</label>
                 <li> <FaUserAlt /> </li>
             </ul>
         </div>

@@ -37,7 +37,7 @@ button.add-button :first-child {
 .tasksCardListInfo {
   display: flex;
   justify-content: space-around;
-  width: 400px;
+  width: 300px;
 }
 
 /* default styles here for older browsers. 
@@ -74,6 +74,12 @@ button.add-button :first-child {
     width: 250px;
     font-size: 30px;
     padding-top: 15px;
+  }
+
+  .tasksCardListInfo {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
   }
 }
 @media only screen and (device-width: 768px) {
