@@ -4,9 +4,22 @@
   transition: 1s ease;
 }
 
+.sidebar-collapse h1 {
+  color: #fff;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  transition: 1s ease;
+}
+
 .sidebar-uncollapse {
   width: 150px;
   margin: 0;
+  transition: 1s ease;
+}
+
+.sidebar-uncollapse h1 {
+  color: #0e225d;
   transition: 1s ease;
 }
 

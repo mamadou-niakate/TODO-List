@@ -87,6 +87,9 @@ div.content {
 
 .main-dark .sidebar-collapse-dark h1 {
   color: #fff;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 2px;
   transition: 1s ease;
 }
 
@@ -137,6 +140,7 @@ div.content {
   flex-wrap: wrap;
   width: 300px;
   transition: 1s ease;
+  border-radius: 10px;
 }
 
 footer.footer-dark {
@@ -183,7 +187,7 @@ footer.footer-dark .social-networks ul li a {
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: scroll;
-    width: 390px;
+    width: 420px;
     height: 250px;
     margin-left: 10px;
   }
