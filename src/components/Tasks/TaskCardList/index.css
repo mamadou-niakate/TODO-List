@@ -67,7 +67,7 @@ button.add-button {
     flex-wrap: nowrap;
     overflow-x: scroll;
     scrollbar-track-color: #03015d;
-    width: 390px;
+    width: 330px;
     height: 250px;
     margin-left: 10px;
   }
