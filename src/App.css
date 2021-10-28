@@ -85,19 +85,33 @@ div.content {
   transition: 1s ease;
 }
 
+.main-dark .sidebar-collapse-dark h1 {
+  color: #fff;
+  transition: 1s ease;
+}
+
+.main-dark .sidebar-collapse-dark .sidebar-menu .sidebar-menu-item {
+  color: #fff;
+}
+
 .main-dark .sidebar-uncollapse-dark {
   background-color: #414141;
   transition: 1s ease;
 }
 
-.sidebar-uncollapse-dark h1 {
+.main-dark .sidebar-uncollapse-dark h1 {
+  color: #fff;
+  transition: 1s ease;
+}
+
+.main-dark .sidebar-uncollapse-dark .sidebar-menu .sidebar-menu-item {
   color: #fff;
 }
 
 .tasksCardListInfo-dark {
   display: flex;
   justify-content: space-around;
-  width: 400px;
+  width: 300px;
 }
 
 .tasksCardListInfo-dark .title {
@@ -123,6 +137,37 @@ div.content {
   flex-wrap: wrap;
   width: 300px;
   transition: 1s ease;
+}
+
+footer.footer-dark {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #525252;
+  padding-top: 30px;
+}
+
+footer.footer-dark .social-networks {
+  display: flex;
+  justify-content: center;
+}
+
+footer.footer-dark .social-networks ul.social-networks-links {
+  display: flex;
+  justify-content: space-around;
+  width: 150px;
+}
+
+footer.footer-dark .contact_copyright {
+  padding-bottom: 20px;
+  color: #fffdfd;
+  border-bottom: 1px solid #fffdfd;
+}
+
+footer.footer-dark .social-networks ul li a {
+  font-size: 30px;
+  color: #fffdfd;
 }
 
 @media only screen and (max-device-width: 480px) {
