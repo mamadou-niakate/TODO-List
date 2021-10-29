@@ -30,6 +30,17 @@
   font-size: 40px;
 }
 
+.app-bar .nav-items .theme-switch-button {
+  background-color: transparent;
+  border: none;
+}
+
+.app-bar .nav-items .theme-switch-button .theme-switch-button-icon {
+  color: #03015d;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 input[type="checkbox"] {
   height: 0;
   width: 0;

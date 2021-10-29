@@ -80,6 +80,17 @@ div.content {
   cursor: pointer;
 }
 
+.app-bar-dark-mode .nav-items .theme-switch-button {
+  background-color: transparent;
+  border: none;
+}
+
+.app-bar-dark-mode .nav-items .theme-switch-button .theme-switch-button-icon {
+  color: #f5e53a;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .main-dark {
   display: flex;
   justify-content: space-between;

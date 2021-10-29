@@ -4,6 +4,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { FaUserAlt } from 'react-icons/fa';
 import './index.css';
 import { AppContext } from '../HOC';
+import { BsFillSunFill, BsMoonStarsFill} from 'react-icons/bs';
 
 function Appbar() {
     const {dispatcher, state} = useContext(AppContext);
@@ -32,8 +33,16 @@ function Appbar() {
                 </p> 
             </div>
             <ul className="nav-items">
-                <input type="checkbox" id="switch" onChange={handleDarkMode}/>
-                <label htmlFor="switch">Toggle</label>
+                <button className="theme-switch-button" onClick={handleDarkMode}>
+                    {
+                        state.switchToDarkMode 
+                            ? 
+                                <BsFillSunFill className="theme-switch-button-icon" onClick={handleDarkMode}/> 
+                            :   <BsMoonStarsFill className="theme-switch-button-icon" onClick={handleDarkMode}/> 
+                    }
+                </button>
+                {/* <input type="checkbox" id="switch" onChange={handleDarkMode}/>
+                <label htmlFor="switch">Toggle</label> */}
                 <li> <FaUserAlt /> </li>
             </ul>
         </div>

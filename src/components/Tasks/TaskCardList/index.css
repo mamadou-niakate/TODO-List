@@ -1,12 +1,13 @@
 .tasksCardList {
+  /* padding: 10px;
+  height: auto; */
   position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: 300px;
+  transition: 1s ease;
   border-radius: 10px;
-  padding: 10px;
-  height: auto;
 }
 
 .tasksCardList:hover {
