@@ -6,13 +6,9 @@ import './index.css'
 import { AiFillPlusCircle } from 'react-icons/ai';
 
 function TaskCardList({title,tasks}) {
-    const { dispatcher, state } = useContext(AppContext);
+    const { state } = useContext(AppContext);
     const [openModal, setOpenModal] = useState(false);
 
-    const addTaskCard = (newTodoCard) => {
-        dispatcher({type: 'ADDNEWTODOCARD',payload:newTodoCard});
-        setOpenModal(false);
-    }
 
     return (
         <div className="tasksCardListContainer">
@@ -27,7 +23,6 @@ function TaskCardList({title,tasks}) {
                 </button>
             </div>
             <div className={state.switchToDarkMode ? "tasksCardList-dark" : "tasksCardList"}>
-            {/* <div className="tasksCardList"> */}
                 {
                     tasks.map((task) => {
                         return (
@@ -35,19 +30,21 @@ function TaskCardList({title,tasks}) {
                         )
                     })
                 }
-                <Modal 
-                    show={openModal} 
-                    setOpenModal={setOpenModal}
-                    task={{
-                        title:"",
-                        description:"",
-                        date:Date.now,
-                        priority:"less",
-                        status:"to do"
-                    }}
-                    addTaskCard={addTaskCard}
-                    method="post"
-                />
+
+                {openModal && (
+                    <Modal 
+                        show={openModal} 
+                        setOpenModal={setOpenModal}
+                        task={{
+                            title:"",
+                            description:"",
+                            date:new Intl.DateTimeFormat().format(new Date().now),
+                            priority:"medium",
+                            status:"to do"
+                        }}
+                        method="post"
+                    />
+                )}                    
             </div>
         </div>
     )

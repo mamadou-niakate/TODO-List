@@ -1,5 +1,7 @@
+import localStorageService from "./localStorage.service";
+
 export const getFilterService = {
-    filterDataByStatus: (data,status) => {
-        return data.filter(item => item.status === status);
+    filterDataByStatus: (status) => {
+        return localStorageService.getTasks().filter(item => item.status === status);
     }
 }

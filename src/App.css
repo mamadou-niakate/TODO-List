@@ -6,9 +6,10 @@
 
 main {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-direction: column;
   width: 100%;
+  min-height: 948px;
 }
 
 main .content {
@@ -84,6 +85,7 @@ div.content {
   justify-content: space-between;
   background-color: #23272f;
   transition: 1s ease;
+  min-height: 948px;
 }
 
 .main-dark .sidebar-collapse-dark {
@@ -118,8 +120,9 @@ div.content {
 }
 
 .main-dark .sidebar-uncollapse-dark li .sidebar-menu-item:hover {
-  background-color: #283641;
+  border-bottom: 2px solid #283641;
   color: #249eca;
+  background-color: inherit;
 }
 
 .tasksCardListInfo-dark {

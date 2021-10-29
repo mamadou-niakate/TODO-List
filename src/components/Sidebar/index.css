@@ -55,7 +55,9 @@ li .sidebar-menu-item {
 }
 
 li .sidebar-menu-item:hover {
-  background-color: aliceblue;
+  background-color: inherit;
+  border-bottom: 2px solid #0e225d;
+  color: #249eca;
 }
 
 ul h1 {

@@ -7,6 +7,7 @@ import TasksCalendar from './components/Calendar';
 import { AppContext, ContextProvider } from './components/HOC';
 import Sidebar from './components/Sidebar';
 import Appbar from './components/Appbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ const MyApp = () => {
               <h1>Erreur 404</h1>
             </Route>
           </Switch>
+          <Footer/>
           </main>
       </div>
     </Router>

@@ -1,67 +1,73 @@
 import React, { useReducer } from "react";
-import { tasks } from '../data';
 import { getFilterService } from '../services/filter.service';
+import tasksService from '../services/localStorage.service';
 
 const AppContext = React.createContext();
 
 
 const reducer = (state,action) => {
   if(action.type === "COLLAPSE") {
+
     return {...state,collapse:true};
+
   } else if( action.type === "UNCOLLAPSE") {
+
     return {...state,collapse:false};
+
   } else if(action.type === "ADDNEWTODOCARD") {
+
     const { status } = action.payload;
-    if(status === "to do") {
-      state.tasksTodo.push(action.payload);
-    } else if( status === "in progress") {
-      state.tasksInProgress.push(action.payload);
-    } else if (status === "complete") {
-      state.tasksComplete.push(action.payload);
-    }
+    
+    action.payload.id = new Date().getTime() * Math.random() * 10000;
+    tasksService.addTask(action.payload);
+    const tasksOfTheStatus = getFilterService.filterDataByStatus(status);
+    
+    if(status === "to do") state.tasksTodo = tasksOfTheStatus;
+    if( status === "in progress")  state.tasksInProgress = tasksOfTheStatus;
+    if (status === "complete")  state.tasksComplete = tasksOfTheStatus; 
+    
     return {...state};
+
   } else if(action.type === "EDITTASK") {
-    const {id,status} = action.payload;
-    if(status === "to do") {
-      const newTasksTodo = state.tasksTodo.map((taskTodo) => {
-        if(taskTodo.id === id) {
-          return action.payload;
-        }
-        return taskTodo
-      })
-      state.tasksTodo = newTasksTodo;
-    } 
-    if(status === "in progress") {
-      const newTasksInprogress = state.tasksInProgress.map((taskInProgress) => {
-        if(taskInProgress.id === id) {
-          return action.payload;
-        }
-        return taskInProgress
-      })
-      state.tasksInProgress = newTasksInprogress;
-    }
-    if(status === "complete") {
-      const newTasksComple = state.tasksComplete.map((taskComplete) => {
-        if(taskComplete.id === id) {
-          return action.payload;
-        }
-        return taskComplete
-      })
-      state.tasksComplete = newTasksComple;
-    }
-    return {...state}
+
+    const { status } = action.payload;
+    tasksService.updateTask(action.payload);
+    const tasksOfTheStatus = getFilterService.filterDataByStatus(status);
+    
+    if(status === "to do") state.tasksTodo = tasksOfTheStatus;
+    if(status === "in progress")  state.tasksInProgress = tasksOfTheStatus; 
+    if(status === "complete") state.tasksComplete = tasksOfTheStatus; 
+    window.location.reload();
+    return {...state};
+
+  } else if(action.type === "REMOVETASK") {
+
+    const { id, status } = action.payload;
+    tasksService.removeTask(id);
+    const tasksOfTheStatus = getFilterService.filterDataByStatus(status);
+    
+    if(status === "to do") state.tasksTodo = tasksOfTheStatus;
+    if(status === "in progress")  state.tasksInProgress = tasksOfTheStatus; 
+    if(status === "complete") state.tasksComplete = tasksOfTheStatus; 
+
+    return {...state};
+
   } else if (action.type === "SWITCHTODARKMODE") {
+
     state.switchToDarkMode = true;
-    return {...state}
+    return {...state};
+
   } else if (action.type === "SWITCHTONORMALMODE") {
+
     state.switchToDarkMode = false;
-    return {...state}
+    return {...state};
+
   }
 }
 const defaultState = {
-  tasksTodo: getFilterService.filterDataByStatus(tasks,"to do"),
-  tasksInProgress: getFilterService.filterDataByStatus(tasks,"in progress"),
-  tasksComplete: getFilterService.filterDataByStatus(tasks,"complete"),
+  tasksTodo: getFilterService.filterDataByStatus("to do"),
+  tasksInProgress: getFilterService.filterDataByStatus("in progress"),
+  tasksComplete: getFilterService.filterDataByStatus("complete"),
   collapse: true,
   switchToDarkMode: false
 }

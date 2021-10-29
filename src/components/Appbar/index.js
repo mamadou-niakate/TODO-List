@@ -33,7 +33,7 @@ function Appbar() {
             </div>
             <ul className="nav-items">
                 <input type="checkbox" id="switch" onChange={handleDarkMode}/>
-                <label for="switch">Toggle</label>
+                <label htmlFor="switch">Toggle</label>
                 <li> <FaUserAlt /> </li>
             </ul>
         </div>

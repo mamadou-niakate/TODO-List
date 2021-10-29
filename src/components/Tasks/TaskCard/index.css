@@ -21,6 +21,8 @@
   flex-direction: column;
   background-color: #fffdfd;
   border-radius: 10px;
+  width: 200px;
+  word-wrap: break-word;
 }
 
 .high-priority {
