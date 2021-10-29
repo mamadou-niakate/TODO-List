@@ -11,6 +11,10 @@ main {
   width: 100%;
 }
 
+main .content {
+  margin-top: 100px;
+}
+
 /**** CHILD COMPONENT */
 .app-bar {
   background-color: #fff;
@@ -39,7 +43,9 @@ div.content {
 
 /** DARK MODE */
 .app-bar-dark-mode {
-  background-color: #414141;
+  position: fixed;
+  z-index: 1;
+  background-color: #23272f;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,12 +82,12 @@ div.content {
 .main-dark {
   display: flex;
   justify-content: space-between;
-  background-color: #414141;
+  background-color: #23272f;
   transition: 1s ease;
 }
 
 .main-dark .sidebar-collapse-dark {
-  background-color: #414141;
+  background-color: #23272f;
   transition: 1s ease;
 }
 
@@ -98,7 +104,7 @@ div.content {
 }
 
 .main-dark .sidebar-uncollapse-dark {
-  background-color: #414141;
+  background-color: #23272f;
   transition: 1s ease;
 }
 
@@ -109,6 +115,11 @@ div.content {
 
 .main-dark .sidebar-uncollapse-dark .sidebar-menu .sidebar-menu-item {
   color: #fff;
+}
+
+.main-dark .sidebar-uncollapse-dark li .sidebar-menu-item:hover {
+  background-color: #283641;
+  color: #249eca;
 }
 
 .tasksCardListInfo-dark {
@@ -133,7 +144,7 @@ div.content {
 }
 
 .tasksCardList-dark {
-  background-color: #525252;
+  background-color: #343a46;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -148,8 +159,9 @@ footer.footer-dark {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #525252;
+  background-color: #343a46;
   padding-top: 30px;
+  transition: 1s ease;
 }
 
 footer.footer-dark .social-networks {
@@ -172,6 +184,11 @@ footer.footer-dark .contact_copyright {
 footer.footer-dark .social-networks ul li a {
   font-size: 30px;
   color: #fffdfd;
+}
+
+footer.footer-dark .contact_copyright .copyright .author {
+  color: #fffdfd;
+  text-decoration: none;
 }
 
 @media only screen and (max-device-width: 480px) {

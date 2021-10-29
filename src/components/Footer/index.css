@@ -5,6 +5,7 @@ footer.footer {
   align-items: center;
   background-color: aliceblue;
   padding-top: 30px;
+  transition: 1s ease;
 }
 
 footer.footer .social-networks {
@@ -26,5 +27,10 @@ footer.footer .contact_copyright {
 
 footer.footer .social-networks ul li a {
   font-size: 30px;
+  color: #0e225d;
+}
+
+footer.footer .contact_copyright .copyright .author {
+  text-decoration: none;
   color: #0e225d;
 }

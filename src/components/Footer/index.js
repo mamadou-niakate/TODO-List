@@ -9,7 +9,7 @@ function Footer() {
         <footer className={state.switchToDarkMode ? "footer-dark" : "footer"}>
             <div className="contact_copyright">
                 <div className="copyright">
-                    <span>© 2021 <strong>Mamadou Niakaté</strong>. All rights reserved. Built with Reactjs</span>
+                    <span>© 2021 <strong><a href="https://niakate.netlify.app/" className="author">Mamadou Niakaté</a></strong>. All rights reserved. Built with Reactjs</span>
                 </div>
             </div>
             <div className="social-networks">

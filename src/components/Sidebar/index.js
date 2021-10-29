@@ -30,9 +30,9 @@ function Sidebar() {
 
     return (
         <div className={state.collapse ? "sidebar-collapse sidebar-collapse-dark" : "sidebar-uncollapse sidebar-uncollapse-dark"}>
-            <h1 style={{paddingBottom:-40, marginTop:10}}>Todo</h1>
-            <hr/>
-            <ul className="sidebar-menu">
+            <h1 style={{paddingBottom:-40, marginTop:10,     position: 'fixed',paddingTop: 9}}>Todo</h1>
+            <hr style={{marginTop:54, width:138, height:0, position:'fixed'}}/>
+            <ul className="sidebar-menu" style={{    position: 'fixed',height: '100%',marginTop: 50}}>
                 {navLinks.map((item) => {
                     const { id, Icon, label, link } = item;
                     return (
