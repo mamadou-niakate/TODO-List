@@ -4,7 +4,7 @@ import './modal.css';
 
 const Modal = ({ setOpenModal, show, task, method }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
-  const { dispatcher } = useContext(AppContext)
+  const { dispatcher, state } = useContext(AppContext)
 
   const [taskToWorkOn, setTaskToWorkOn] = useState(task);
   
@@ -28,7 +28,7 @@ const Modal = ({ setOpenModal, show, task, method }) => {
 
   return (
     <div className={showHideClassName} onClick={() => setOpenModal(false)}>
-      <section className="modal-main" onClick={stopChildClickPropagation}>
+      <section className={state.switchToDarkMode ? "modal-main-dark" : "modal-main"} onClick={stopChildClickPropagation}>
         <h2>Ajout/Modifier</h2>
         <div className="form-container">
           <form className="form">

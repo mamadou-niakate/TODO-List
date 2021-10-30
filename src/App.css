@@ -179,6 +179,48 @@ div.content {
   border-radius: 10px;
 }
 
+.modal-main-dark {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  width: 50%;
+  height: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #23272f;
+}
+
+.modal-main-dark h2 {
+  background-color: #283641;
+  color: #249eca;
+  height: 40px;
+  width: 50%;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.modal-main-dark input,
+.modal-main-dark textarea,
+.modal-main-dark select {
+  background-color: #343a46;
+  color: #787f8f;
+  border: #23272f;
+}
+
+.modal-main-dark input:focus,
+.modal-main-dark textarea:focus,
+.modal-main-dark select:focus {
+  background-color: #283641;
+}
+
+.modal-main-dark button.save {
+  background-color: #249eca;
+  border: #249eca;
+}
+
 footer.footer-dark {
   margin-top: 50px;
   display: flex;
@@ -249,5 +291,11 @@ footer.footer-dark .contact_copyright .copyright .author {
   }
   .app-bar-dark-mode {
     position: inherit;
+  }
+
+  .modal-main-dark {
+    width: 100%;
+    height: 100%;
+    background-color: #23272f;
   }
 }
