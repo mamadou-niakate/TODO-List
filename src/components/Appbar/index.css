@@ -87,4 +87,8 @@ input:checked + label:after {
     justify-content: space-around;
     width: 40%;
   }
+
+  .app-bar {
+    position: inherit;
+  }
 }

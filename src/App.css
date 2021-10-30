@@ -110,6 +110,11 @@ div.content {
   padding-top: 10px;
   padding-bottom: 2px;
   transition: 1s ease;
+  /* TEMPORAIRE */
+  position: fixed;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #fff;
+  width: 50px;
 }
 
 .main-dark .sidebar-collapse-dark .sidebar-menu .sidebar-menu-item {
@@ -124,6 +129,11 @@ div.content {
 .main-dark .sidebar-uncollapse-dark h1 {
   color: #fff;
   transition: 1s ease;
+  /* TEMPORAIRE */
+  position: fixed;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #fff;
+  width: 133px;
 }
 
 .main-dark .sidebar-uncollapse-dark .sidebar-menu .sidebar-menu-item {
@@ -139,13 +149,14 @@ div.content {
 .tasksCardListInfo-dark {
   display: flex;
   justify-content: space-around;
-  width: 300px;
+  width: 100%;
 }
 
 .tasksCardListInfo-dark .title {
   font-size: 25px;
   padding-top: 15px;
   color: #fff;
+  width: 50%;
 }
 
 .tasksCardListInfo-dark .add-button .plus-icon {
@@ -205,8 +216,22 @@ footer.footer-dark .contact_copyright .copyright .author {
   text-decoration: none;
 }
 
+@media only screen and (device-width: 768px) {
+  /* default iPad screens */
+  main {
+    min-height: 1335px;
+    min-width: 500px;
+  }
+}
+
 @media only screen and (max-device-width: 480px) {
   /* styles for mobile browsers smaller than 480px; (iPhone) */
+
+  .tasksCardListInfo-dark {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
 
   div.content {
     display: flex;
@@ -221,5 +246,8 @@ footer.footer-dark .contact_copyright .copyright .author {
     width: 390px;
     height: 250px;
     margin-left: 10px;
+  }
+  .app-bar-dark-mode {
+    position: inherit;
   }
 }
