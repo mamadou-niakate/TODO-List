@@ -3,7 +3,7 @@ import { getFilterService } from '../services/filter.service';
 import tasksService from '../services/localStorage.service';
 
 const AppContext = React.createContext();
-
+const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 const reducer = (state,action) => {
   if(action.type === "COLLAPSE") {
@@ -69,7 +69,7 @@ const defaultState = {
   tasksInProgress: getFilterService.filterDataByStatus("in progress"),
   tasksComplete: getFilterService.filterDataByStatus("complete"),
   collapse: true,
-  switchToDarkMode: false
+  switchToDarkMode: isDarkMode,
 }
 
 const ContextProvider = ({children}) => {
