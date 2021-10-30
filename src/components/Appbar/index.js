@@ -37,8 +37,8 @@ function Appbar() {
                     {
                         state.switchToDarkMode 
                             ? 
-                                <BsFillSunFill className="theme-switch-button-icon" onClick={handleDarkMode}/> 
-                            :   <BsMoonStarsFill className="theme-switch-button-icon" onClick={handleDarkMode}/> 
+                                <BsFillSunFill className="theme-switch-button-icon"/> 
+                            :   <BsMoonStarsFill className="theme-switch-button-icon"/> 
                     }
                 </button>
                 {/* <input type="checkbox" id="switch" onChange={handleDarkMode}/>
