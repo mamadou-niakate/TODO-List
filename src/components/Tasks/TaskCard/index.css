@@ -1,6 +1,4 @@
 .task-container {
-  display: flex;
-  justify-content: space-between;
   background-color: #fffdfd;
   border-radius: 10px;
   padding: 10px 10px 30px 10px;
@@ -8,8 +6,9 @@
 }
 
 .action-buttons {
+  display: flex;
+  justify-content: space-evenly;
   background-color: #fffdfd;
-  border-radius: 10px;
 }
 
 .task-container:hover {
@@ -21,20 +20,26 @@
   flex-direction: column;
   background-color: #fffdfd;
   border-radius: 10px;
-  width: 200px;
+  width: 100%;
   word-wrap: break-word;
 }
 
 .high-priority {
   border-top: 10px solid rgba(250, 1, 1, 0.5);
+  border-radius: 10px;
+  width: 30%;
 }
 
 .medium-priority {
   border-top: 10px solid rgba(238, 157, 8, 0.5);
+  border-radius: 10px;
+  width: 30%;
 }
 
 .less-priority {
   border-top: 10px solid rgba(0, 128, 0, 0.5);
+  border-radius: 10px;
+  width: 30%;
 }
 
 h1,
@@ -45,6 +50,23 @@ p {
 
 .date {
   display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 40%;
+}
+
+.date p {
+  margin-bottom: 10px;
+}
+
+.deadline-reached {
+  background-color: rgba(241, 130, 141, 0.4);
+}
+
+.deadline-not-reached {
+  background-color: rgba(0, 177, 106, 0.3);
 }
 
 @media only screen and (max-device-width: 480px) {

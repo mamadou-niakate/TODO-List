@@ -89,6 +89,6 @@ input:checked + label:after {
   }
 
   .app-bar {
-    position: inherit;
+    position: fixed;
   }
 }

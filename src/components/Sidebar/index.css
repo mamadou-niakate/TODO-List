@@ -6,8 +6,9 @@
 
 .sidebar-collapse h1 {
   font-size: 20px;
-  padding-top: 10px;
-  padding-bottom: 2px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-top: auto;
   transition: 1s ease;
   /* FIXED */
   position: fixed;
@@ -23,11 +24,11 @@
 }
 
 .sidebar-uncollapse h1 {
-  color: #0e225d;
   transition: 1s ease;
-  /* FIXED */
   position: fixed;
-  padding-bottom: 8px;
+  padding-bottom: 9px;
+  padding-top: 9px;
+  margin-top: auto;
   border-bottom: 1px solid #c4c4c4;
   width: 140px;
 }
@@ -105,6 +106,7 @@ ul h1 {
 @media only screen and (max-device-width: 480px) {
   .sidebar-collapse {
     width: 0;
+    border: none;
     transition: 1s ease;
   }
 
@@ -115,8 +117,8 @@ ul h1 {
 
   .sidebar-collapse h1 {
     transition: 1s ease;
-    /* TEMPORAIRE */
     width: 0;
+    opacity: 0;
   }
 
   .nav-link-icons-collapse {
