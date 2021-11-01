@@ -287,13 +287,13 @@ footer.footer-dark .contact_copyright .copyright .author {
   }
 
   .tasksCardList-dark {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: scroll;
     width: 390px;
     height: 250px;
-    margin-left: 10px;
+    margin-left: 10px; */
   }
   .app-bar-dark-mode {
     position: fixed;
