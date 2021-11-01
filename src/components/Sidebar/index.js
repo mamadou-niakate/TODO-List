@@ -31,19 +31,19 @@ function Sidebar() {
     return (
         <div className={state.collapse ? "sidebar-collapse sidebar-collapse-dark" : "sidebar-uncollapse sidebar-uncollapse-dark"}>
             <h1 style={{paddingBottom:-40}}>Todo</h1>
-            {/* <hr/> */}
+
             <ul className="sidebar-menu">
                 {navLinks.map((item) => {
                     const { id, Icon, label, link } = item;
                     return (
                         <li key={id} onClick={() => handleActiveItem(label)}>
-                            <Link className="sidebar-menu-item" to={link}>
+                            <Link 
+                                className={`sidebar-menu-item ${label === activeItem ? 'sidebar-menu-item-active' : 'sidebar-menu-item-inactive'}`} 
+                                to={link} 
+                            >
                                 <p className={state.collapse && "nav-link-icons-collapse"}>{Icon}</p>
-                                <p 
-                                    className={state.collapse ? "item-collapse" : "item-uncollapse"} 
-                                    style={label === activeItem ? {color: "#03015d"} : {}}
-                                >
-                                        { label }
+                                <p className={state.collapse ? "item-collapse" : "item-uncollapse"}>
+                                    { label }
                                 </p>
                             </Link>
                         </li>

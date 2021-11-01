@@ -120,10 +120,6 @@ div.content {
   width: 60px;
 }
 
-.main-dark .sidebar-collapse-dark .sidebar-menu .sidebar-menu-item {
-  color: #fff;
-}
-
 .main-dark .sidebar-uncollapse-dark {
   background-color: #23272f;
   box-shadow: 0 0 5px 1px #343a46;
@@ -143,14 +139,19 @@ div.content {
   width: 133px;
 }
 
-.main-dark .sidebar-uncollapse-dark .sidebar-menu .sidebar-menu-item {
+/* .main-dark .sidebar-uncollapse-dark .sidebar-menu .sidebar-menu-item {
   color: #fff;
-}
+} */
 
-.main-dark .sidebar-uncollapse-dark li .sidebar-menu-item:hover {
+/* .main-dark .sidebar-uncollapse-dark li .sidebar-menu-item:hover {
   border-bottom: 2px solid #283641;
   color: #249eca;
   background-color: inherit;
+} */
+
+.main-dark .sidebar-uncollapse-dark li .sidebar-menu-item-active > * {
+  border-bottom: 2px solid #283641;
+  color: #249eca;
 }
 
 .tasksCardListInfo-dark {
