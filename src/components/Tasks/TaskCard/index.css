@@ -96,4 +96,8 @@ p {
     justify-content: center;
     width: 100%;
   }
+
+  .task-card h1 {
+    font-size: large;
+  }
 }
