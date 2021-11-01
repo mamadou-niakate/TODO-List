@@ -77,15 +77,6 @@ li .sidebar-menu-item {
   color: #03015d;
 }
 
-/* li .sidebar-menu-item:hover {
-  border-bottom: 2px solid #0e225d;
-} */
-
-/* .sidebar-collapse .sidebar-menu li .sidebar-menu-item {
-  transition: 1s ease;
-  border: none;
-} */
-
 h1 {
   color: #03015d;
 }
@@ -122,5 +113,12 @@ h1 {
   .nav-link-icons-collapse {
     font-size: 0;
     transition: 1s ease;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  /* styles for browsers larger than 960px; */
+  .sidebar-menu {
+    position: relative;
   }
 }
