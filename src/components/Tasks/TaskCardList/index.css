@@ -1,6 +1,4 @@
 .tasksCardList {
-  /* padding: 10px;
-  height: auto; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -79,19 +77,18 @@ div.tasksCardListInfo h1.title {
 }
 @media only screen and (device-width: 768px) {
   /* default iPad screens */
-  .tasksCardListContainer {
+  /* .tasksCardListContainer {
     margin-left: 40px;
-  }
+  } */
 
   .tasksCardList {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: scroll;
     width: 390px;
     height: 250px;
-    margin-left: 10px;
-    background-color: red;
+    margin-left: 10px; */
   }
 }
 /* different techniques for iPad screening */

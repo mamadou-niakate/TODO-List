@@ -3,7 +3,8 @@ main .content {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
   height: 100%;
 }
 

@@ -279,11 +279,12 @@ footer.footer-dark .contact_copyright .copyright .author {
 
   main .content {
     margin-top: 50px;
-  }
-
-  div.content {
     display: flex;
     flex-direction: column;
+  }
+
+  .main-dark .content {
+    background-color: #23272f;
   }
 
   .tasksCardList-dark {
