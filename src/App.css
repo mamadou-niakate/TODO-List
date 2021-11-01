@@ -155,24 +155,20 @@ div.content {
 
 .tasksCardListInfo-dark {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
 }
 
 .tasksCardListInfo-dark .title {
   font-size: 25px;
-  padding-top: 15px;
   color: #fff;
-  width: 50%;
+  margin-top: auto;
 }
 
-.tasksCardListInfo-dark .add-button .plus-icon {
+.tasksCardListInfo-dark .plus-icon {
   font-size: 40px;
-  margin: 20px 0 10px 100px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .tasksCardList-dark {

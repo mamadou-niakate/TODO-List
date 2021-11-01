@@ -14,13 +14,10 @@ function TaskCardList({title,tasks}) {
         <div className="tasksCardListContainer">
             <div className={state.switchToDarkMode ? "tasksCardListInfo-dark" : "tasksCardListInfo"}>
                 <h1 className="title">{title}</h1>
-                <button 
-                    className="add-button" 
+                <AiFillPlusCircle 
+                    className="plus-icon" 
                     onClick={() => setOpenModal(true)}
-                    style={{display:'inline-block'}}
-                >
-                    <AiFillPlusCircle className="plus-icon" />
-                </button>
+                />
             </div>
             <div className={state.switchToDarkMode ? "tasksCardList-dark" : "tasksCardList"}>
                 {
