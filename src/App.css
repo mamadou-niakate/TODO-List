@@ -269,8 +269,12 @@ footer.footer-dark .contact_copyright .copyright .author {
 
   .tasksCardListInfo-dark {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .tasksCardListInfo-dark > * {
+    margin: 10px;
   }
 
   main .content {

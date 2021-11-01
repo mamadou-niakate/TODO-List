@@ -64,15 +64,17 @@ div.tasksCardListInfo h1.title {
   }
 
   .tasksCardListInfo .title {
-    width: 100px;
     font-size: 30px;
     padding-top: 15px;
   }
 
   .tasksCardListInfo {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .tasksCardListInfo > * {
+    margin: 10px;
   }
 }
 @media only screen and (device-width: 768px) {
