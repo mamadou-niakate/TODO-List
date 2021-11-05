@@ -12,10 +12,6 @@ main {
   min-height: 948px;
 }
 
-main .content {
-  margin-top: 100px;
-}
-
 /**** CHILD COMPONENT */
 .app-bar {
   background-color: #fff;
@@ -35,12 +31,6 @@ main .content {
   background-color: #efefef;
 }
 
-div.content {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
 /** DARK MODE */
 .main-dark main {
   background-color: #23272f;
@@ -55,12 +45,8 @@ div.content {
   align-items: center;
   height: 55px;
   width: 100%;
-  transition: 1s ease;
-}
-
-.app-bar-dark-mode {
-  /* border-bottom: 1px solid rgb(255, 255, 255); */
   box-shadow: 0 0 5px 1px #343a46;
+  transition: 1s ease;
 }
 
 .app-bar-dark-mode .logo {
@@ -154,6 +140,19 @@ div.content {
   color: #249eca;
 }
 
+main .content-dark {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #23272f;
+  height: 100%;
+  padding: 100px 0 100px 0;
+  transition: 1s ease;
+}
+
 .tasksCardListInfo-dark {
   display: flex;
   justify-content: space-between;
@@ -227,7 +226,6 @@ div.content {
 }
 
 footer.footer-dark {
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -269,10 +267,30 @@ footer.footer-dark .contact_copyright .copyright .author {
     min-height: 1335px;
     min-width: 500px;
   }
+
+  main .content-dark {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  main .content-dark > * {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 @media only screen and (max-device-width: 480px) {
   /* styles for mobile browsers smaller than 480px; (iPhone) */
+  main .content-dark {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  main .content-dark > * {
+    margin-left: 20px;
+  }
 
   .tasksCardListInfo-dark {
     display: flex;
@@ -282,12 +300,6 @@ footer.footer-dark .contact_copyright .copyright .author {
 
   .tasksCardListInfo-dark > * {
     margin: 10px;
-  }
-
-  main .content {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
   }
 
   .app-bar-dark-mode {

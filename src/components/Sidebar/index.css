@@ -1,6 +1,7 @@
 .sidebar-collapse {
   width: 50px;
   margin: 0;
+  background-color: #fff;
   transition: 1s ease;
 }
 
@@ -19,6 +20,7 @@
 .sidebar-uncollapse {
   width: 150px;
   margin: 0;
+  background-color: #fff;
   transition: 1s ease;
 }
 
@@ -118,7 +120,7 @@ h1 {
 
 @media only screen and (min-width: 960px) {
   /* styles for browsers larger than 960px; */
-  .sidebar-menu {
+  /* .sidebar-menu {
     position: relative;
-  }
+  } */
 }

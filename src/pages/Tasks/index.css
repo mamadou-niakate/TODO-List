@@ -5,12 +5,15 @@ main .content {
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
+  background-color: #fff;
   height: 100%;
+  padding: 100px 0 100px 0;
+  transition: 1s ease;
 }
 
 /* default styles here for older browsers. 
-       I tend to go for a 600px - 960px width max but using percentages
-    */
+    I tend to go for a 600px - 960px width max but using percentages
+*/
 @media only screen and (min-width: 960px) {
   /* styles for browsers larger than 960px; */
   main .content > * {
@@ -34,9 +37,12 @@ main .content {
     justify-content: space-between;
   }
   main .content > * {
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
+
+/* default iPad screens */
 @media only screen and (device-width: 768px) {
   main .content {
     display: flex;
@@ -46,15 +52,6 @@ main .content {
   main .content > * {
     margin-left: 20px;
   }
-  /* default iPad screens */
-  /* main .content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    overflow: scroll;
-    height: 100%;
-  } */
 }
 /* different techniques for iPad screening */
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
@@ -62,18 +59,10 @@ main .content {
   main .content > * {
     margin-left: 20px;
   }
-  /* main .content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    overflow: scroll;
-    height: 100%;
-  }
 
   main .content > * {
     margin-left: 20px;
-  } */
+  }
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
