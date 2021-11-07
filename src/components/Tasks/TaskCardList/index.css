@@ -20,7 +20,6 @@ div.tasksCardListInfo h1.title {
 
 .tasksCardListInfo .plus-icon {
   font-size: 40px;
-  /* margin: 20px 0 10px 100px; */
   color: #03015d;
   cursor: pointer;
 }
@@ -29,6 +28,12 @@ div.tasksCardListInfo h1.title {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+.tasksCardList .add-card-btn {
+  border: none;
+  margin: 10px;
+  cursor: pointer;
 }
 
 /* default styles here for older browsers. 
@@ -45,6 +50,11 @@ div.tasksCardListInfo h1.title {
 }
 @media only screen and (max-device-width: 480px) {
   /* styles for mobile browsers smaller than 480px; (iPhone) */
+  /* .tasksCardListContainer {
+    height: 748px;
+    overflow-x: initial;
+  } */
+
   .tasksCardListContainer {
     display: flex;
     flex-direction: column;

@@ -9,7 +9,7 @@ main {
   justify-content: space-between;
   flex-direction: column;
   width: 100%;
-  min-height: 948px;
+  height: 100%;
 }
 
 /**** CHILD COMPONENT */

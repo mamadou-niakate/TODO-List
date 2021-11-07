@@ -4,6 +4,7 @@ import Modal from '../../Modal'
 import TaskCard from '../TaskCard'
 import './index.css'
 import { AiFillPlusCircle } from 'react-icons/ai';
+import { BiDotsHorizontalRounded } from 'react-icons/bi';
 
 function TaskCardList({title,tasks}) {
     const { state } = useContext(AppContext);
@@ -11,24 +12,32 @@ function TaskCardList({title,tasks}) {
 
 
     return (
-        <div className="tasksCardListContainer">
-            <div className={state.switchToDarkMode ? "tasksCardListInfo-dark" : "tasksCardListInfo"}>
-                <h1 className="title">{title}</h1>
-                <AiFillPlusCircle 
-                    className="plus-icon" 
-                    onClick={() => setOpenModal(true)}
-                />
+        <>
+            <div className="tasksCardListContainer">
+                <div className={state.switchToDarkMode ? "tasksCardListInfo-dark" : "tasksCardListInfo"}>
+                    <h1 className="title">{title}</h1>
+                    <BiDotsHorizontalRounded 
+                        className="plus-icon" 
+                        onClick={() => setOpenModal(true)}
+                    />
+                </div>
+                <div className={state.switchToDarkMode ? "tasksCardList-dark" : "tasksCardList"}>
+                    {
+                        tasks.map((task) => {
+                            return (
+                                <TaskCard key={new Date().getTime().toString()*Math.random()*1000} task={task}/>
+                            )
+                        })
+                    }
+                    <button 
+                        className="add-card-btn"
+                        onClick={() => setOpenModal(true)}
+                    >
+                        + Ajouter une carte
+                    </button>              
+                </div>
             </div>
-            <div className={state.switchToDarkMode ? "tasksCardList-dark" : "tasksCardList"}>
-                {
-                    tasks.map((task) => {
-                        return (
-                            <TaskCard key={new Date().getTime().toString()*Math.random()*1000} task={task}/>
-                        )
-                    })
-                }
-
-                {openModal && (
+            {openModal && (
                     <Modal 
                         show={openModal} 
                         setOpenModal={setOpenModal}
@@ -41,9 +50,8 @@ function TaskCardList({title,tasks}) {
                         }}
                         method="post"
                     />
-                )}                    
-            </div>
-        </div>
+                )}      
+        </>
     )
 }
 
