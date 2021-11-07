@@ -16,6 +16,7 @@ div.tasksCardListInfo h1.title {
   font-size: 25px;
   color: #03015d;
   margin-top: auto;
+  padding-bottom: 10px;
 }
 
 .tasksCardListInfo .plus-icon {
@@ -34,6 +35,9 @@ div.tasksCardListInfo h1.title {
   border: none;
   margin: 10px;
   cursor: pointer;
+  font-size: 20px;
+  background-color: transparent;
+  color: #03015d;
 }
 
 /* default styles here for older browsers. 
