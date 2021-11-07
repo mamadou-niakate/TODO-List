@@ -19,6 +19,7 @@ function App() {
 
 const MyApp = () => {
   const { state } = useContext(AppContext);
+
   return (
     <Router>
       <div className={state.switchToDarkMode ?  "main-dark" : "main"}>

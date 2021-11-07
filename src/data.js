@@ -3,6 +3,7 @@ export const tasks = [
     title: 'Todo',
     tasks: [
       {
+        id: Math.floor(Math.random() * 1000000),
         title: 'Task 1',
         description: 'Description 1',
         done: false,    
@@ -11,6 +12,7 @@ export const tasks = [
         status: "complete",
       },
       {
+        id: Math.floor(Math.random() * 1000000),
         title: 'Task 2',
         description: 'Description 2',
         date:1389878466730,
@@ -19,6 +21,7 @@ export const tasks = [
         status: "complete",
       },
       {
+        id: Math.floor(Math.random() * 1000000),
         title: 'Task 3',
         description: 'Description 3',
         date:1389878466730,
@@ -32,6 +35,7 @@ export const tasks = [
     title: 'In Progress',
     tasks: [
       {
+        id: Math.floor(Math.random() * 1000000),
         title: 'Task 1',
         description: 'Description 1',
         done: false,
@@ -40,6 +44,7 @@ export const tasks = [
         status: "complete",
       },
       {
+        id: Math.floor(Math.random() * 1000000),
         title: 'Task 2',
         description: 'Description 2',
         date:1389878466730,
@@ -48,6 +53,7 @@ export const tasks = [
         status: "complete",
       },
       {
+        id: Math.floor(Math.random() * 1000000),
         title: 'Task 3',
         description: 'Description 3',
         date:1389878466730,
@@ -61,6 +67,7 @@ export const tasks = [
     title: 'Done',
     tasks: [
       {
+        id: Math.floor(Math.random() * 1000000),
         title: 'Task 1',
         description: 'Description 1',
         done: false,
@@ -69,6 +76,7 @@ export const tasks = [
         status: "complete",
       },
       {
+        id: Math.floor(Math.random() * 1000000),
         title: 'Task 2',
         description: 'Description 2',
         date:1389878466730,
@@ -77,6 +85,7 @@ export const tasks = [
         status: "complete",
       },
       {
+        id: Math.floor(Math.random() * 1000000),
         title: 'Task 3',
         description: 'Description 3',
         date:1389878466730,

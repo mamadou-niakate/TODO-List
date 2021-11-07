@@ -6,7 +6,8 @@ import { AiTwotoneDelete } from 'react-icons/ai';
 import Modal from '../../Modal';
 import { AppContext } from '../../HOC';
 import { isDeadlineReached } from '../../../services/utilities';
-function TaskCard({task}) {
+
+function TaskCard({task,tasksGroupTitle}) {
     const { dispatcher } = useContext(AppContext);
     const {title,description,date,priority} = task;
     const [openModal, setOpenModal] = useState(false);
@@ -15,7 +16,6 @@ function TaskCard({task}) {
         dispatcher({type:"REMOVETASK",payload:task})
     }
 
-    // console.log(date);
     return (
         <>
             <div className="task-container">
@@ -33,7 +33,7 @@ function TaskCard({task}) {
 
                     <div className={`date ${isDeadlineReached(date) ? 'deadline-reached' : 'deadline-not-reached'}`}>
                         <p><MdUpdate /></p>
-                        <p>{date}</p>
+                        <p>{date}</p> 
                     </div>
                     <div className="action-buttons">
                         <p><BiEdit style={{cursor:'pointer'}} onClick={() => setOpenModal(true)}/></p>
@@ -47,6 +47,7 @@ function TaskCard({task}) {
                 setOpenModal={setOpenModal}
                 task={task}
                 method="put"
+                tasksGroupTitle={tasksGroupTitle}
             />
         </>
     )

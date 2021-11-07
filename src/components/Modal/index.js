@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { AppContext } from '../HOC';
 import './modal.css';
 
-const Modal = ({ setOpenModal, show, task, method }) => {
+const Modal = ({ setOpenModal, show, task, tasksGroupTitle, method }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
   const { dispatcher, state } = useContext(AppContext)
 
@@ -18,9 +18,9 @@ const Modal = ({ setOpenModal, show, task, method }) => {
 
   const handleSave = () => {
     if(method === "post") {
-      dispatcher({type:"ADDNEWTODOCARD",payload:taskToWorkOn})
+      dispatcher({type:"ADDNEWTODOCARD",payload:{taskToAdd:taskToWorkOn,tasksGroupleTitle:tasksGroupTitle}})
     } else if(method === "put") {
-      dispatcher({type:"EDITTASK",payload:taskToWorkOn})
+      dispatcher({type:"EDITTASK",payload:{taskToEdit:taskToWorkOn,tasksGroupleTitle:tasksGroupTitle}})
     }
     
     setOpenModal(false)

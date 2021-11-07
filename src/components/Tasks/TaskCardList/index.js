@@ -6,9 +6,9 @@ import './index.css'
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 
 function TaskCardList({title,tasks}) {
+
     const { state } = useContext(AppContext);
     const [openModal, setOpenModal] = useState(false);
-
 
     return (
         <>
@@ -24,7 +24,11 @@ function TaskCardList({title,tasks}) {
                     {
                         tasks.map((task) => {
                             return (
-                                <TaskCard key={new Date().getTime().toString()*Math.random()*1000} task={task}/>
+                                <TaskCard 
+                                    key={new Date().getTime().toString()*Math.random()*1000} 
+                                    task={task}
+                                    tasksGroupTitle={title}
+                                />
                             )
                         })
                     }
@@ -48,6 +52,7 @@ function TaskCardList({title,tasks}) {
                             status:"to do"
                         }}
                         method="post"
+                        tasksGroupTitle={title}
                     />
                 )}      
         </>

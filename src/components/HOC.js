@@ -1,5 +1,4 @@
 import React, { useReducer } from "react";
-import { getFilterService } from '../services/filter.service';
 import tasksService from '../services/localStorage.service';
 
 const AppContext = React.createContext();
@@ -16,41 +15,25 @@ const reducer = (state,action) => {
 
   } else if(action.type === "ADDNEWTODOCARD") {
 
-    const { status } = action.payload;
-    
-    action.payload.id = new Date().getTime() * Math.random() * 10000;
-    tasksService.addTask(action.payload);
-    const tasksOfTheStatus = getFilterService.filterDataByStatus(status);
-    
-    if(status === "to do") state.tasksTodo = tasksOfTheStatus;
-    if( status === "in progress")  state.tasksInProgress = tasksOfTheStatus;
-    if (status === "complete")  state.tasksComplete = tasksOfTheStatus; 
-    
-    return {...state};
+    const { taskToAdd, tasksGroupleTitle } = action.payload;
+    taskToAdd.id = new Date().getTime() * Math.random() * 100000000;
+    const newStateTasks = tasksService.addTask(tasksGroupleTitle,taskToAdd);
+    return {...state,tasks:newStateTasks};
 
   } else if(action.type === "EDITTASK") {
 
-    const { status } = action.payload;
-    tasksService.updateTask(action.payload);
-    const tasksOfTheStatus = getFilterService.filterDataByStatus(status);
-    
-    if(status === "to do") state.tasksTodo = tasksOfTheStatus;
-    if(status === "in progress")  state.tasksInProgress = tasksOfTheStatus; 
-    if(status === "complete") state.tasksComplete = tasksOfTheStatus; 
+    const { taskToEdit, tasksGroupleTitle } = action.payload;
+    tasksService.updateTask(tasksGroupleTitle,taskToEdit);
+    const newStateTasks = tasksService.getTasks();
     window.location.reload();
-    return {...state};
+    return {...state,tasks:newStateTasks};
 
   } else if(action.type === "REMOVETASK") {
 
-    const { id, status } = action.payload;
-    tasksService.removeTask(id);
-    const tasksOfTheStatus = getFilterService.filterDataByStatus(status);
-    
-    if(status === "to do") state.tasksTodo = tasksOfTheStatus;
-    if(status === "in progress")  state.tasksInProgress = tasksOfTheStatus; 
-    if(status === "complete") state.tasksComplete = tasksOfTheStatus; 
-
-    return {...state};
+    const { id } = action.payload;
+    tasksService.removeTask(id);    
+    const newStateTasks = tasksService.getTasks();
+    return {...state, tasks:newStateTasks};
 
   } else if (action.type === "SWITCHTODARKMODE") {
 
@@ -64,16 +47,16 @@ const reducer = (state,action) => {
 
   }
 }
+
 const defaultState = {
-  tasksTodo: getFilterService.filterDataByStatus("to do"),
-  tasksInProgress: getFilterService.filterDataByStatus("in progress"),
-  tasksComplete: getFilterService.filterDataByStatus("complete"),
+  tasks: tasksService.getTasks(),
   collapse: true,
   switchToDarkMode: isDarkMode,
 }
 
 const ContextProvider = ({children}) => {
     const [state,dispatcher] = useReducer(reducer,defaultState);
+
     return (
         <AppContext.Provider value={{state,dispatcher}}>
             {children}
