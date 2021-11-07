@@ -11,6 +11,11 @@ main .content {
   transition: 1s ease;
 }
 
+main .content > * {
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
 /* default styles here for older browsers. 
     I tend to go for a 600px - 960px width max but using percentages
 */
