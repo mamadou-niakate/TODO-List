@@ -3,7 +3,6 @@ import { AppContext } from '../../HOC'
 import Modal from '../../Modal'
 import TaskCard from '../TaskCard'
 import './index.css'
-import { AiFillPlusCircle } from 'react-icons/ai';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 
 function TaskCardList({title,tasks}) {
