@@ -94,7 +94,6 @@ main {
   justify-content: space-between;
   background-color: #23272f;
   transition: 1s ease;
-  min-height: 948px;
 }
 
 .main-dark .sidebar-collapse-dark {
