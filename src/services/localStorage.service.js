@@ -73,6 +73,19 @@ class localStorageService {
         },[]);
         localStorage.setItem(this.tasksKey,JSON.stringify(newTasks));
     }
+
+    addTasksGroup = (taskGroup) => {
+        const newTasks = this.getTasks();
+        newTasks.push(taskGroup);
+        localStorage.setItem(this.tasksKey,JSON.stringify(newTasks));
+        return this.getTasks();
+    }
+
+    removeTasksGroup = (taskGroupTitle) => {
+        const newTasks = this.getTasks().filter(taskGroup => taskGroup.title !== taskGroupTitle);
+        localStorage.setItem(this.tasksKey,JSON.stringify(newTasks));
+        return this.getTasks();
+    }
 }
 
 export  default new localStorageService();

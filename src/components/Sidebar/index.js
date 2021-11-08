@@ -1,10 +1,13 @@
 import React, { useContext, useState } from 'react'
 import {HiOutlineCollection} from 'react-icons/hi'
 import { AiTwotoneCalendar } from 'react-icons/ai';
+import { BsPlusLg } from 'react-icons/bs';
+
 import { Link } from "react-router-dom";
 
 import './index.css';
 import { AppContext } from '../HOC';
+import TasksListModalForm from '../Modal/tasksList/TasksListModalForm';
 
 const navLinks = [
     {
@@ -23,6 +26,7 @@ const navLinks = [
 function Sidebar() {
     const { state } = useContext(AppContext)
     const [activeItem, setActiveItem] = useState('');
+    const [openModal, setOpenModal] = useState(false);
 
     const handleActiveItem = (item) => {
         setActiveItem(item)
@@ -49,7 +53,25 @@ function Sidebar() {
                         </li>
                     )
                 })}
+                <li className={`sidebar-menu-item`} onClick={() => setOpenModal(true)}>
+                        <p className={state.collapse && "nav-link-icons-collapse"}>
+                            <BsPlusLg />
+                        </p>
+                        <p className={state.collapse ? "item-collapse" : "item-uncollapse"}>
+                            Add list
+                        </p>
+                </li>
             </ul>
+            {
+                openModal && (
+                    <TasksListModalForm 
+                        show={openModal} 
+                        setOpenModal={setOpenModal}
+                        tasksGroup={{title:'',tasks:[]}}
+                        method="post"
+                    />
+                )
+            }
         </div>
     )
 }

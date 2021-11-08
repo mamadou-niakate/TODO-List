@@ -45,6 +45,10 @@ const reducer = (state,action) => {
     state.switchToDarkMode = false;
     return {...state};
 
+  } else if (action.type === "ADDNEWTASKSGROUP") {
+    const newStateTasks = tasksService.addTasksGroup(action.payload);
+    console.log(newStateTasks);
+    return {...state,tasks:newStateTasks};
   }
 }
 
