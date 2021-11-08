@@ -46,7 +46,7 @@ main {
 
 .app-bar-dark-mode {
   position: fixed;
-  z-index: 0;
+  z-index: 1;
   background-color: #23272f;
   display: flex;
   justify-content: space-between;
