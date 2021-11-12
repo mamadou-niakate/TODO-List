@@ -15,21 +15,22 @@
   position: fixed;
   padding-bottom: 11px;
   width: 50px;
+  z-index: 1;
 }
 
 .sidebar-uncollapse {
   width: 150px;
   margin: 0;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .sidebar-uncollapse h1 {
-  transition: 1s ease;
   position: fixed;
   padding-bottom: 9px;
   padding-top: 9px;
   margin-top: auto;
-  width: 140px;
+  width: 139px;
+  z-index: 1;
 }
 
 .sidebar-menu {

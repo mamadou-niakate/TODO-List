@@ -33,14 +33,16 @@ function Appbar() {
                 </p> 
             </div>
             <ul className="nav-items">
-                <button className="theme-switch-button" onClick={handleDarkMode}>
-                    {
-                        state.switchToDarkMode 
-                            ? 
-                                <BsFillSunFill className="theme-switch-button-icon"/> 
-                            :   <BsMoonStarsFill className="theme-switch-button-icon"/> 
-                    }
-                </button>
+                <li>
+                    <button className="theme-switch-button" onClick={handleDarkMode}>
+                        {
+                            state.switchToDarkMode 
+                                ? 
+                                    <BsFillSunFill className="theme-switch-button-icon"/> 
+                                :   <BsMoonStarsFill className="theme-switch-button-icon"/> 
+                        }
+                    </button>
+                </li>
                 <li> <FaUserAlt /> </li>
             </ul>
         </div>

@@ -42,10 +42,11 @@
   width: 30%;
 }
 
-h1,
-p {
+.task-card h1,
+.task-card p {
   margin-top: 20px;
   margin-bottom: 0;
+  color: #0e225d;
 }
 
 .date {
