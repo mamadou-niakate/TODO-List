@@ -1,7 +1,7 @@
 .content {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
@@ -32,8 +32,8 @@
 }
 
 /* for sumo sized (mac) screens */
-/* @media only screen and (min-width: 2000px) {
-} */
+@media only screen and (min-width: 2000px) {
+}
 
 /* styles for mobile browsers smaller than 480px; (iPhone) */
 @media only screen and (max-device-width: 480px) {

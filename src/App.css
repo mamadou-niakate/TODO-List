@@ -3,14 +3,13 @@
   justify-content: space-between;
   transition: 1s ease;
   margin: 0;
-  height: 100%;
+  min-height: 100vh;
 }
 
 main {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 100%;
   width: 100%;
 }
 
