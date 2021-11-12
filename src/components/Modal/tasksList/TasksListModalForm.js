@@ -28,9 +28,9 @@ const TasksListModalForm = ({ setOpenModal, show, tasksGroup, method }) => {
 
   return (
     <div className={showHideClassName} onClick={() => setOpenModal(false)}>
-      <section className={state.switchToDarkMode ? "modal-main-dark" : "modal-main"} onClick={stopChildClickPropagation}>
+      <section className={`modal-main ${state.switchToDarkMode ? "modal-main-dark" : "modal-main-light"}`} onClick={stopChildClickPropagation}>
         <h2>Ajout/Modifier</h2>
-        <div className="form-container">
+        <div className="form-container"> 
           <form className="form">
             <p><input type="text" name="title" placeholder="Title" value={tasksGroupToWorkOn.title} onChange={handleInputChange}/></p>
           </form>

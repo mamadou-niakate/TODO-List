@@ -23,7 +23,7 @@ function Appbar() {
         }
     }
     return (
-        <div className={state.switchToDarkMode ? "app-bar-dark-mode":"app-bar"}>
+        <div className={`app-bar ${state.switchToDarkMode ? "app-bar-dark-mode":"app-bar-light-mode"}`}>
             <div className="logo"> 
                 <p style={{cursor:'pointer'}}>
                     {
@@ -41,8 +41,6 @@ function Appbar() {
                             :   <BsMoonStarsFill className="theme-switch-button-icon"/> 
                     }
                 </button>
-                {/* <input type="checkbox" id="switch" onChange={handleDarkMode}/>
-                <label htmlFor="switch">Toggle</label> */}
                 <li> <FaUserAlt /> </li>
             </ul>
         </div>

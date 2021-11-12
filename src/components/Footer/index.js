@@ -6,7 +6,7 @@ import './index.css'
 function Footer() {
     const { state } = useContext(AppContext);
     return (
-        <footer className={state.switchToDarkMode ? "footer-dark" : "footer"}>
+        <footer className={`footer ${state.switchToDarkMode ? "footer-dark" : "footer-light"}`}>
             <div className="contact_copyright">
                 <div className="copyright">
                     <span>© 2021 <strong><a href="https://niakate.netlify.app/" className="author">Mamadou Niakaté</a></strong>. All rights reserved. Built with Reactjs</span>

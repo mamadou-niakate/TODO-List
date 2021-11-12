@@ -7,7 +7,7 @@ function Tasks() {
   const { state } = useContext(AppContext);
 
   return (
-    <div className={state.switchToDarkMode ? "content-dark" : "content"}>
+    <div className={`content ${state.switchToDarkMode ? "content-dark" : "content-light"}`}>
       {
         state.tasks && state.tasks.map((tasksGroup) => {
           if(tasksGroup !== null) {

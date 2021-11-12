@@ -22,7 +22,7 @@ const MyApp = () => {
 
   return (
     <Router>
-      <div className={state.switchToDarkMode ?  "main-dark" : "main"}>
+      <div className={`main ${state.switchToDarkMode ?  "main-dark" : "main-light"}`}>
         <Sidebar />
         <main>
           <Appbar />

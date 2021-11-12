@@ -2,226 +2,188 @@
   display: flex;
   justify-content: space-between;
   transition: 1s ease;
-  height: 100vh; /* 100% height */
+  margin: 0;
+  height: 100%;
 }
 
 main {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  height: 100%;
   width: 100%;
 }
 
-/**** CHILD COMPONENT */
-.app-bar {
+/* LIGHT MODE */
+.app-bar-light-mode {
   background-color: #fff;
+  color: #03015d;
   border-bottom: 1px solid rgb(177, 177, 177);
 }
 
-.sidebar-collapse {
+.app-bar-light-mode .logo {
+  color: #03015d;
+}
+
+.app-bar-light-mode .nav-items li {
+  color: #03015d;
+}
+
+.app-bar-light-mode .nav-items .theme-switch-button .theme-switch-button-icon {
+  color: #03015d;
+}
+
+.sidebar-collapse-light {
   background-color: #fff;
   border-right: 1px solid rgb(177, 177, 177);
+  color: #03015d;
 }
 
-.sidebar-uncollapse {
+.sidebar-collapse h1 {
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.sidebar-uncollapse-light {
+  background-color: #fff;
+  transition: 1s ease;
   border-right: 1px solid rgb(177, 177, 177);
 }
 
-.tasksCardList {
+.sidebar-uncollapse-light h1 {
+  color: #03015d;
+  border-bottom: 1px solid #c4c4c4;
+  transition: 1s ease;
+}
+
+.sidebar-collapse-light .sidebar-menu .sidebar-menu-item-active > *,
+.sidebar-uncollapse-light .sidebar-menu .sidebar-menu-item-active > * {
+  color: #03015d;
+}
+
+.tasksCardList-light {
   background-color: #efefef;
+  transition: 1s ease;
 }
 
-/** DARK MODE */
-.main-dark {
-  height: 100vh; /* 100% height */
-}
-.main-dark main {
-  background-color: #23272f;
+.content-light {
+  background-color: #fff;
+  transition: 1s ease;
 }
 
-.main-dark main .content-dark > * {
-  overflow-y: auto;
-  flex-shrink: 0;
+.footer-light {
+  background-color: aliceblue;
+  transition: 1s ease;
 }
 
+.footer-light .contact_copyright {
+  border-bottom: 1px solid #0e225d;
+}
+
+.footer-light .contact_copyright,
+.footer-light .social-networks ul li a,
+.footer-light .contact_copyright .copyright .author {
+  color: #0e225d;
+}
+
+.modal-main {
+  background: white;
+}
+
+/* DARK MODE */
 .app-bar-dark-mode {
-  position: fixed;
-  z-index: 1;
   background-color: #23272f;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 55px;
-  width: 100%;
   box-shadow: 0 0 5px 1px #343a46;
   transition: 1s ease;
 }
 
 .app-bar-dark-mode .logo {
-  margin-bottom: 10px;
-  margin-left: 10px;
   color: #fff;
-  font-size: 40px;
-}
-
-.app-bar-dark-mode .nav-items {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 40%;
 }
 
 .app-bar-dark-mode .nav-items li {
-  list-style-type: none;
   color: #fff;
-  font-weight: 900;
-  cursor: pointer;
-}
-
-.app-bar-dark-mode .nav-items .theme-switch-button {
-  background-color: transparent;
-  border: none;
 }
 
 .app-bar-dark-mode .nav-items .theme-switch-button .theme-switch-button-icon {
   color: #f5e53a;
-  font-size: 30px;
-  cursor: pointer;
 }
 
-.main-dark {
-  display: flex;
-  justify-content: space-between;
-  background-color: #23272f;
-  transition: 1s ease;
-}
-
-.main-dark .sidebar-collapse-dark {
+.sidebar-collapse-dark {
   background-color: #23272f;
   box-shadow: 0 0 5px 1px #343a46;
-  border: none;
-  transition: 1s ease;
-  z-index: 1;
-}
-
-.main-dark .sidebar-collapse-dark h1 {
   color: #fff;
-  font-size: 20px;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  margin-top: auto;
-  transition: 1s ease;
-  position: fixed;
-  padding-bottom: 11px;
-  border: none;
-  box-shadow: 0 0 5px 1px #343a46;
-  width: 60px;
 }
 
-.main-dark .sidebar-uncollapse-dark {
+.sidebar-collapse-dark h1 {
+  color: #fff;
+  box-shadow: 0 0 5px 1px #343a46;
+}
+
+.sidebar-uncollapse-dark {
   background-color: #23272f;
   box-shadow: 0 0 5px 1px #343a46;
-  border: none;
   transition: 1s ease;
-  z-index: 1;
 }
 
-.main-dark .sidebar-uncollapse-dark h1 {
+.sidebar-uncollapse-dark h1 {
   color: #fff;
-  transition: 1s ease;
-  position: fixed;
-  padding-bottom: 9px;
-  padding-top: 9px;
-  margin-top: auto;
-  border: none;
   box-shadow: 0 0 5px 1px #343a46;
-  width: 133px;
+  transition: 1s ease;
 }
 
-.main-dark .sidebar-collapse-dark li .sidebar-menu-item-active > * {
+.sidebar-collapse-dark li .sidebar-menu-item-active > * {
   color: #249eca;
 }
 
-.main-dark .sidebar-uncollapse-dark li .sidebar-menu-item-active > * {
+.sidebar-uncollapse-dark li .sidebar-menu-item-active > * {
   border-bottom: 2px solid #283641;
   color: #249eca;
 }
 
-main .content-dark {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  background-color: #23272f;
-  height: 100%;
-  padding: 60px 0 60px 0;
-  transition: 1s ease;
-}
-
-.tasksCardListInfo-dark {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.tasksCardListInfo-dark .title {
-  font-size: 25px;
-  color: #fff;
-  margin-top: auto;
-  padding-bottom: 10px;
-}
-
-.tasksCardListInfo-dark .plus-icon {
-  font-size: 40px;
+.tasksCardListInfo-dark .title,
+.tasksCardListInfo-dark .plus-icon,
+.tasksCardList-dark .add-card-btn {
   color: #ffffff;
-  cursor: pointer;
 }
 
 .tasksCardList-dark {
   background-color: #343a46;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 300px;
   transition: 1s ease;
-  border-radius: 10px;
-  padding-bottom: 10px;
 }
-.tasksCardList-dark .add-card-btn {
-  border: none;
-  margin: 10px;
-  cursor: pointer;
-  font-size: 20px;
-  background-color: transparent;
-  color: #fff;
+
+.main-dark {
+  background-color: #23272f;
+  transition: 1s ease;
+}
+
+.content-dark,
+.footer-dark {
+  background-color: #23272f;
+  transition: 1s ease;
+}
+
+.footer-dark {
+  background-color: #343a46;
+  transition: 1s ease;
+}
+
+.footer-dark .contact_copyright {
+  border-bottom: 1px solid #fffdfd;
+}
+
+.footer-dark .contact_copyright,
+.footer-dark .social-networks ul li a,
+.footer-dark .contact_copyright .copyright .author {
+  color: #fffdfd;
 }
 
 .modal-main-dark {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: white;
-  width: 50%;
-  height: 60%;
-  top: 50%;
-  left: 50%;
-  border-radius: 10px;
-  transform: translate(-50%, -50%);
   background-color: #23272f;
-  z-index: 100;
 }
 
 .modal-main-dark h2 {
   background-color: #283641;
   color: #249eca;
-  height: 40px;
-  width: 50%;
-  padding-top: 10px;
-  text-align: center;
 }
 
 .modal-main-dark input,
@@ -241,91 +203,4 @@ main .content-dark {
 .modal-main-dark button.save {
   background-color: #249eca;
   border: #249eca;
-}
-
-footer.footer-dark {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #343a46;
-  padding-top: 30px;
-  transition: 1s ease;
-}
-
-footer.footer-dark .social-networks {
-  display: flex;
-  justify-content: center;
-}
-
-footer.footer-dark .social-networks ul.social-networks-links {
-  display: flex;
-  justify-content: space-around;
-  width: 150px;
-}
-
-footer.footer-dark .contact_copyright {
-  padding-bottom: 20px;
-  color: #fffdfd;
-  border-bottom: 1px solid #fffdfd;
-}
-
-footer.footer-dark .social-networks ul li a {
-  font-size: 30px;
-  color: #fffdfd;
-}
-
-footer.footer-dark .contact_copyright .copyright .author {
-  color: #fffdfd;
-  text-decoration: none;
-}
-
-@media only screen and (device-width: 768px) {
-  /* default iPad screens */
-  main {
-    min-height: 1335px;
-    min-width: 500px;
-  }
-
-  main .content-dark {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  main .content-dark > * {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}
-
-@media only screen and (max-device-width: 480px) {
-  /* styles for mobile browsers smaller than 480px; (iPhone) */
-  main .content-dark {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  main .content-dark > * {
-    margin-left: 20px;
-  }
-
-  .tasksCardListInfo-dark {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-
-  .tasksCardListInfo-dark > * {
-    margin: 10px;
-  }
-
-  .app-bar-dark-mode {
-    position: fixed;
-  }
-
-  .modal-main-dark {
-    width: 100%;
-    height: 100%;
-  }
 }

@@ -9,16 +9,15 @@
   transition: 1s ease;
 }
 
-.nav-items {
+.app-bar .nav-items {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 40%;
 }
 
-.nav-items li {
+.app-bar .nav-items li {
   list-style-type: none;
-  color: #03015d;
   font-weight: 900;
   cursor: pointer;
 }
@@ -26,7 +25,6 @@
 .app-bar .logo {
   margin-bottom: 10px;
   margin-left: 10px;
-  color: #03015d;
   font-size: 40px;
 }
 
@@ -36,7 +34,6 @@
 }
 
 .app-bar .nav-items .theme-switch-button .theme-switch-button-icon {
-  color: #03015d;
   font-size: 30px;
   cursor: pointer;
 }

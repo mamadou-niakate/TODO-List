@@ -1,7 +1,8 @@
 .sidebar-collapse {
   width: 50px;
   margin: 0;
-  background-color: #fff;
+  transition: 1s ease;
+  z-index: 1;
   transition: 1s ease;
 }
 
@@ -13,15 +14,13 @@
   transition: 1s ease;
   position: fixed;
   padding-bottom: 11px;
-  border-bottom: 1px solid #c4c4c4;
   width: 50px;
 }
 
 .sidebar-uncollapse {
   width: 150px;
   margin: 0;
-  background-color: #fff;
-  transition: 1s ease;
+  z-index: 1;
 }
 
 .sidebar-uncollapse h1 {
@@ -30,7 +29,6 @@
   padding-bottom: 9px;
   padding-top: 9px;
   margin-top: auto;
-  border-bottom: 1px solid #c4c4c4;
   width: 140px;
 }
 
@@ -72,22 +70,6 @@ li.sidebar-menu-item {
   color: #c4c4c4;
 }
 
-.sidebar-collapse .sidebar-menu .sidebar-menu-item-active > * {
-  color: #03015d;
-}
-
-.sidebar-uncollapse .sidebar-menu .sidebar-menu-item-active > * {
-  color: #03015d;
-}
-
-h1 {
-  color: #03015d;
-}
-
-.nav-link-icons {
-  color: "#03015d";
-}
-
 @media only screen and (device-width: 768px) {
   /* default iPad screens */
   .sidebar-menu {
@@ -96,15 +78,15 @@ h1 {
 }
 
 @media only screen and (max-device-width: 480px) {
+  .sidebar-menu {
+    position: relative;
+    margin-top: 80px;
+  }
+
   .sidebar-collapse {
     width: 0;
     border: none;
     transition: 1s ease;
-  }
-
-  .sidebar-menu {
-    position: relative;
-    margin-top: 80px;
   }
 
   .sidebar-collapse h1 {
@@ -121,7 +103,22 @@ h1 {
 
 @media only screen and (min-width: 960px) {
   /* styles for browsers larger than 960px; */
-  /* .sidebar-menu {
+  .sidebar-menu {
     position: relative;
-  } */
+  }
+}
+
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* For portrait layouts only */
+  .sidebar-menu {
+    position: relative;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* For landscape layouts only */
+  .sidebar-menu {
+    position: relative;
+  }
 }

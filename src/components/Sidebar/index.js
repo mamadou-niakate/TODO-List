@@ -33,7 +33,10 @@ function Sidebar() {
     }
 
     return (
-        <div className={state.collapse ? "sidebar-collapse sidebar-collapse-dark" : "sidebar-uncollapse sidebar-uncollapse-dark"}>
+        <div 
+            className={
+                state.collapse ? `sidebar-collapse ${state.switchToDarkMode ? "sidebar-collapse-dark" : "sidebar-collapse-light"}` : `sidebar-uncollapse ${state.switchToDarkMode ? "sidebar-uncollapse-dark" : 'sidebar-uncollapse-light'}`}
+        >
             <h1 style={{paddingBottom:-40}}>Todo</h1>
 
             <ul className="sidebar-menu">

@@ -13,14 +13,14 @@ function TaskCardList({title,tasks}) {
     return (
         <>
             <div className="tasksCardListContainer">
-                <div className={state.switchToDarkMode ? "tasksCardListInfo-dark" : "tasksCardListInfo"}>
+                <div className={`tasksCardListInfo ${state.switchToDarkMode ? "tasksCardListInfo-dark" : "tasksCardListInfo-light"}`}>
                     <h1 className="title">{title}</h1>
                     <BiDotsHorizontalRounded 
                         className="plus-icon" 
                         onClick={() => setOpenModal(true)}
                     />
                 </div>
-                <div className={state.switchToDarkMode ? "tasksCardList-dark" : "tasksCardList"}>
+                <div className={`tasksCardList ${state.switchToDarkMode ? "tasksCardList-dark" : "tasksCardList-light"}`}>
                     {
                         tasks.map((task) => {
                             return (
