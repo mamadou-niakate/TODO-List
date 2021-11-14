@@ -27,7 +27,7 @@ const Modal = ({ setOpenModal, show, task, tasksGroupTitle, method }) => {
   }
 
   return (
-    <div className={showHideClassName} onClick={() => setOpenModal(false)}>
+    <div className={showHideClassName} onClick={() => setOpenModal(false)} style={{margin:0}}>
       <section className={`modal-main ${state.switchToDarkMode ? "modal-main-dark" : "modal-main-light"}`} onClick={stopChildClickPropagation}>
         <h2>Ajout/Modifier</h2>
         <div className="form-container">

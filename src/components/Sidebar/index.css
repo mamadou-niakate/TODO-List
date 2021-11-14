@@ -5,15 +5,13 @@
 }
 
 .sidebar-collapse h1 {
-  font-size: 20px;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  margin-top: auto;
-  transition: 1s ease;
   position: fixed;
-  padding-bottom: 11px;
+  font-size: 20px;
+  margin: auto;
+  padding-top: 15px;
   width: 50px;
   z-index: 1;
+  transition: 1s ease;
 }
 
 .sidebar-uncollapse {
