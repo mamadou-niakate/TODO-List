@@ -4,6 +4,7 @@ import Modal from '../../Modal'
 import TaskCard from '../TaskCard'
 import './index.css'
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
+import Popup from '../../Modal/Popup/Popup'
 
 function TaskCardList({title,tasks}) {
 
@@ -41,7 +42,7 @@ function TaskCardList({title,tasks}) {
                 </div>
             </div>
             {openModal && (
-                    <Modal 
+                    <Popup 
                         show={openModal} 
                         setOpenModal={setOpenModal}
                         task={{
