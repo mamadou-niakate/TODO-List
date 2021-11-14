@@ -1,7 +1,7 @@
 .sidebar-collapse {
   width: 50px;
-  margin: 0;
-  transition: 1s ease;
+  transition-duration: 1s;
+  transition-property: width;
 }
 
 .sidebar-collapse h1 {
@@ -11,13 +11,14 @@
   padding-top: 15px;
   width: 50px;
   z-index: 1;
-  transition: 1s ease;
+  transition-duration: 1s;
+  transition-property: width, font-size;
 }
 
 .sidebar-uncollapse {
   width: 150px;
-  margin: 0;
-  transition: 1s ease;
+  transition-duration: 1s;
+  transition-property: width;
 }
 
 .sidebar-uncollapse h1 {
@@ -46,7 +47,7 @@
   color: #c4c4c4;
   font-weight: 900;
   margin-left: 5px;
-  transition: opacity 5s ease, font-weight 5s ease, margin-left 5s ease;
+  transition: opacity 5s, font-weight 5s, margin-left 5s;
 }
 
 li {
@@ -82,18 +83,21 @@ li.sidebar-menu-item {
   .sidebar-collapse {
     width: 0;
     border: none;
-    transition: 1s ease;
+    transition-duration: 1s;
+    transition-property: width;
   }
 
   .sidebar-collapse h1 {
-    transition: 1s ease;
     width: 0;
     opacity: 0;
+    transition-duration: 1s;
+    transition-property: width;
   }
 
   .nav-link-icons-collapse {
     font-size: 0;
-    transition: 1s ease;
+    transition-duration: 1s;
+    transition-property: font-size;
   }
 }
 

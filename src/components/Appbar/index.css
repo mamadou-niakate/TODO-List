@@ -6,7 +6,6 @@
   align-items: center;
   height: 55px;
   width: 100%;
-  transition: 1s ease;
 }
 
 .app-bar .nav-items {
@@ -66,7 +65,6 @@ label:after {
   height: 20px;
   background: grey;
   border-radius: 90px;
-  transition: 0.3s;
 }
 
 input:checked + label {

@@ -1,7 +1,6 @@
 .main {
   display: flex;
   justify-content: space-between;
-  transition: 1s ease;
   margin: 0;
   min-height: 100vh;
 }
@@ -40,13 +39,11 @@ main {
   background-color: #fff;
   border-right: 1px solid rgb(177, 177, 177);
   color: #03015d;
-  transition: 1s ease;
 }
 
 .sidebar-uncollapse-light h1 {
   color: #03015d;
   background-color: #fff;
-  transition: 1s ease;
 }
 
 .sidebar-collapse-light .sidebar-menu {
@@ -64,7 +61,6 @@ main {
 
 .tasksCardList-light {
   background-color: #efefef;
-  transition: 1s ease;
 }
 
 .tasksCardListInfo-light .title,
@@ -75,12 +71,10 @@ main {
 
 .content-light {
   background-color: #fff;
-  transition: 1s ease;
 }
 
 .footer-light {
   background-color: aliceblue;
-  transition: 1s ease;
 }
 
 .footer-light .contact_copyright {
@@ -101,7 +95,6 @@ main {
 .app-bar-dark-mode {
   background-color: #23272f;
   border-bottom: 1px solid #343a46;
-  transition: 1s ease;
 }
 
 .app-bar-dark-mode .logo {
@@ -135,7 +128,6 @@ main {
 .sidebar-uncollapse-dark h1 {
   background-color: #23272f;
   color: #fff;
-  transition: 1s ease;
 }
 
 .sidebar-collapse-dark .sidebar-menu {
@@ -163,22 +155,18 @@ main {
 
 .tasksCardList-dark {
   background-color: #343a46;
-  transition: 1s ease;
 }
 
 .main-dark {
   background-color: #23272f;
-  transition: 1s ease;
 }
 
 .content-dark {
   background-color: #23272f;
-  transition: 1s ease;
 }
 
 .footer-dark {
   background-color: #343a46;
-  transition: 1s ease;
 }
 
 .footer-dark .contact_copyright {
