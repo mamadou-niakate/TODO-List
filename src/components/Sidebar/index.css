@@ -2,8 +2,6 @@
   width: 50px;
   margin: 0;
   transition: 1s ease;
-  z-index: 1;
-  transition: 1s ease;
 }
 
 .sidebar-collapse h1 {
@@ -21,7 +19,7 @@
 .sidebar-uncollapse {
   width: 150px;
   margin: 0;
-  /* z-index: 1; */
+  transition: 1s ease;
 }
 
 .sidebar-uncollapse h1 {
@@ -29,13 +27,13 @@
   padding-bottom: 9px;
   padding-top: 9px;
   margin-top: auto;
-  width: 139px;
+  width: 130px;
   z-index: 1;
 }
 
 .sidebar-menu {
   position: fixed;
-  margin-top: 80px;
+  margin-top: 55px;
 }
 
 .item-collapse {
@@ -81,7 +79,6 @@ li.sidebar-menu-item {
 @media only screen and (max-device-width: 480px) {
   .sidebar-menu {
     position: relative;
-    margin-top: 80px;
   }
 
   .sidebar-collapse {

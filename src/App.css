@@ -33,21 +33,28 @@ main {
 }
 
 .sidebar-collapse h1 {
-  border-bottom: 1px solid #c4c4c4;
   background-color: #fff;
 }
 
 .sidebar-uncollapse-light {
   background-color: #fff;
   border-right: 1px solid rgb(177, 177, 177);
+  color: #03015d;
   transition: 1s ease;
 }
 
 .sidebar-uncollapse-light h1 {
   color: #03015d;
   background-color: #fff;
-  border-bottom: 1px solid #c4c4c4;
   transition: 1s ease;
+}
+
+.sidebar-collapse-light .sidebar-menu {
+  border-top: 1px solid rgb(177, 177, 177);
+}
+
+.sidebar-uncollapse-light .sidebar-menu {
+  border-top: 1px solid rgb(177, 177, 177);
 }
 
 .sidebar-collapse-light .sidebar-menu .sidebar-menu-item-active > *,
@@ -93,7 +100,7 @@ main {
 /* DARK MODE */
 .app-bar-dark-mode {
   background-color: #23272f;
-  box-shadow: 0 0 5px 1px #343a46;
+  border-bottom: 1px solid #343a46;
   transition: 1s ease;
 }
 
@@ -111,28 +118,32 @@ main {
 
 .sidebar-collapse-dark {
   background-color: #23272f;
-  box-shadow: 0 0 5px 1px #343a46;
+  border-right: 1px solid #343a46;
   color: #fff;
 }
 
 .sidebar-collapse-dark h1 {
   background-color: #23272f;
   color: #fff;
-  box-shadow: 0 0 5px 1px #343a46;
 }
 
 .sidebar-uncollapse-dark {
   background-color: #23272f;
-  box-shadow: 0 0 5px 1px #343a46;
-  transition: 1s ease;
+  border-right: 1px solid #343a46;
 }
 
 .sidebar-uncollapse-dark h1 {
   background-color: #23272f;
-
   color: #fff;
-  box-shadow: 0 0 5px 1px #343a46;
   transition: 1s ease;
+}
+
+.sidebar-collapse-dark .sidebar-menu {
+  border-top: 1px solid #343a46;
+}
+
+.sidebar-uncollapse-dark .sidebar-menu {
+  border-top: 1px solid #343a46;
 }
 
 .sidebar-collapse-dark li .sidebar-menu-item-active > * {
