@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
 import { AppContext } from '../../HOC'
-import Modal from '../../Modal'
 import TaskCard from '../TaskCard'
 import './index.css'
 import { BiDotsHorizontalRounded } from 'react-icons/bi';

@@ -1,29 +1,13 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../../HOC';
 import './popup.css';
 
 const Popup = ({ setOpenModal, show, tasksGroup, method }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
-  const { dispatcher, state } = useContext(AppContext)
-
-  const [tasksGroupToWorkOn, setTasksGroupToWorkOn] = useState(tasksGroup);
+  const { state } = useContext(AppContext)
   
-  const handleInputChange = (event) => {
-    setTasksGroupToWorkOn({...tasksGroupToWorkOn,[event.target.name]:event.target.value})
-  }
-
   const stopChildClickPropagation = (e) => {
     e.stopPropagation();
-  }
-
-  const handleSave = () => {
-    if(method === "post") {
-      dispatcher({type:"ADDNEWTASKSGROUP",payload:tasksGroupToWorkOn})
-    } else if(method === "put") {
-      dispatcher({type:"EDITTASKSGROUP",payload:tasksGroupToWorkOn})
-    }
-    
-    setOpenModal(false)
   }
 
   return (
