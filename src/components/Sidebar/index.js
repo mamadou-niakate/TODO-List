@@ -37,7 +37,7 @@ function Sidebar() {
             className={
                 state.collapse ? `sidebar-collapse ${state.switchToDarkMode ? "sidebar-collapse-dark" : "sidebar-collapse-light"}` : `sidebar-uncollapse ${state.switchToDarkMode ? "sidebar-uncollapse-dark" : 'sidebar-uncollapse-light'}`}
         >
-            <h1 style={{paddingBottom:-40}}>Todo</h1>
+            <h1>Todo</h1>
             <ul className="sidebar-menu">
                 {navLinks.map((item) => {
                     const { id, Icon, label, link } = item;
