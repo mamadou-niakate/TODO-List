@@ -14,7 +14,21 @@ function TaskCardList({title,tasks}) {
         <>
             <div className="tasksCardListContainer">
                 <div className={`tasksCardListInfo ${state.switchToDarkMode ? "tasksCardListInfo-dark" : "tasksCardListInfo-light"}`}>
-                    <h1 className="title">{title}</h1>
+                    <h1 className="title">
+                        {title} 
+                        <span style={{
+                                display: "inline-block", 
+                                marginLeft: "10px",
+                                backgroundColor:"#142F43", 
+                                width:40, 
+                                textAlign:"center",
+                                borderRadius:5, 
+                                color:"lightblue"
+                            }}
+                        >
+                            {tasks.length} 
+                        </span>
+                    </h1>
                     <BiDotsHorizontalRounded 
                         className="plus-icon" 
                         onClick={() => setOpenModal(true)}
