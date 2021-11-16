@@ -39,43 +39,6 @@
   cursor: pointer;
 }
 
-input[type="checkbox"] {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-}
-
-label {
-  cursor: pointer;
-  text-indent: -9999px;
-  width: 80px;
-  height: 25px;
-  background: #03015d;
-  display: block;
-  border-radius: 100px;
-  position: relative;
-}
-
-label:after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 5px;
-  width: 20px;
-  height: 20px;
-  background: grey;
-  border-radius: 90px;
-}
-
-input:checked + label {
-  background: #fff;
-}
-
-input:checked + label:after {
-  left: calc(100% - 5px);
-  transform: translateX(-100%);
-}
-
 /******* MEDIA QUERIES*/
 @media only screen and (max-device-width: 480px) {
   .nav-items {
